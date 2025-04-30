@@ -5,3 +5,114 @@ test_cases:
 - response: 7E9044131131A
   expected_values:
     CLR_DIST: 4890
+- response: 7E9044131144E
+  expected_values:
+    CLR_DIST: 5198
+- response: 7E9044131144F
+  expected_values:
+    CLR_DIST: 5199
+- response: '7E90441311450'
+  expected_values:
+    CLR_DIST: 5200
+- response: '7E90441311451'
+  expected_values:
+    CLR_DIST: 5201
+- response: '7E90441311452'
+  expected_values:
+    CLR_DIST: 5202
+- response: '7E90441311453'
+  expected_values:
+    CLR_DIST: 5203
+- response: '7E90441311454'
+  expected_values:
+    CLR_DIST: 5204
+- response: '7E90441311455'
+  expected_values:
+    CLR_DIST: 5205
+- response: '7E90441311456'
+  expected_values:
+    CLR_DIST: 5206
+- response: '7E90441311457'
+  expected_values:
+    CLR_DIST: 5207
+- response: '7E90441311458'
+  expected_values:
+    CLR_DIST: 5208
+- response: '7E90441311459'
+  expected_values:
+    CLR_DIST: 5209
+- response: 7E9044131145A
+  expected_values:
+    CLR_DIST: 5210
+- response: 7E9044131145B
+  expected_values:
+    CLR_DIST: 5211
+- response: 7E9044131145C
+  expected_values:
+    CLR_DIST: 5212
+- response: 7E9044131145D
+  expected_values:
+    CLR_DIST: 5213
+- response: 7E9044131145E
+  expected_values:
+    CLR_DIST: 5214
+- response: 7E9044131145F
+  expected_values:
+    CLR_DIST: 5215
+- response: '7E90441311460'
+  expected_values:
+    CLR_DIST: 5216
+- response: '7E90441311461'
+  expected_values:
+    CLR_DIST: 5217
+- response: '7E90441311462'
+  expected_values:
+    CLR_DIST: 5218
+- response: '7E90441311463'
+  expected_values:
+    CLR_DIST: 5219
+- response: '7E90441311464'
+  expected_values:
+    CLR_DIST: 5220
+- response: '7E90441311465'
+  expected_values:
+    CLR_DIST: 5221
+- response: '7E90441311466'
+  expected_values:
+    CLR_DIST: 5222
+- response: '7E90441311467'
+  expected_values:
+    CLR_DIST: 5223
+- response: '7E90441311468'
+  expected_values:
+    CLR_DIST: 5224
+- response: '7E90441311469'
+  expected_values:
+    CLR_DIST: 5225
+- response: 7E9044131146A
+  expected_values:
+    CLR_DIST: 5226
+- response: 7E9044131146B
+  expected_values:
+    CLR_DIST: 5227
+- response: 7E9044131146C
+  expected_values:
+    CLR_DIST: 5228
+- response: 7E9044131146D
+  expected_values:
+    CLR_DIST: 5229
+- response: 7E9044131146E
+  expected_values:
+    CLR_DIST: 5230
+- response: 7E9044131146F
+  expected_values:
+    CLR_DIST: 5231
+- response: '7E90441311470'
+  expected_values:
+    CLR_DIST: 5232
+- response: '7E90441311471'
+  expected_values:
+    CLR_DIST: 5233
+- response: '7E90441311472'
+  expected_values:
+    CLR_DIST: 5234
