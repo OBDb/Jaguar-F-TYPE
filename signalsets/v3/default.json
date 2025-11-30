@@ -1,4 +1,2305 @@
-{ "commands": [
-
-]
+﻿{
+  "commands": [],
+  "dtcs": {
+    "B10A2-31": {
+      "description": "Crash Input - No signal",
+      "possible_causes": "NOTE: Circuit SRS_SIGNAL; Loss of communication between restraints control module and engine control module",
+      "action": "Refer to the electrical circuit diagrams and check restraints control module pulse width modulated SRS signal line circuit. Check connection between engine control module and restraints control module for short circuit to ground, short circuit to power, open circuit. Repair circuit as required, clear the DTC and retest."
+    },
+    "B10AC-81": {
+      "description": "Cruise Control Switch - Invalid serial data received",
+      "possible_causes": "The engine control module has received an invalid command from the steering wheel switch pack",
+      "action": "Clear the DTC and press all the steering wheel switches, re-check for DTCs. Refer to the electrical circuit diagrams and check the speed control switch circuit for open circuit, short circuit to power, short circuit to ground, disconnected. Check and install a new steering wheel module as required."
+    },
+    "B10AC-82": {
+      "description": "Cruise Control Switch - Alive/sequence counter incorrect/not updated",
+      "possible_causes": "Cruise buttons alive counter is not incrementing (LIN bus faulty); Steering wheel module is not connected; Steering wheel module failure",
+      "action": "Refer to the electrical circuit diagrams and check the speed control switch circuit for open circuit, short circuit to power, short circuit to ground, disconnected. Refer to the electrical circuit diagrams and check the LIN bus between steering wheel module and the CAN gateway. Check and install a new steering wheel module as required."
+    },
+    "B10AC-83": {
+      "description": "Cruise Control Switch - Value of signal protection calculation incorrect",
+      "possible_causes": "Cruise buttons checksum incorrect, incorrect cruise switches fitted to vehicle",
+      "action": "Check and install new cruise switches as required."
+    },
+    "B10AC-95": {
+      "description": "Cruise Control Switch - Component internal failure",
+      "possible_causes": "Speed control switch circuit, open circuit, short circuit to power, short circuit to ground, disconnected; Speed control switch failure; Steering wheel module failure",
+      "action": "Check for related DTCs in other central junction boxes. Refer to the electrical circuit diagrams and check the speed control switch circuit for open circuit, short circuit to power, short circuit to ground, disconnected. Check and install a new speed control switch as required. Check and install a new steering wheel module as required."
+    },
+    "B10FF-68": {
+      "description": "Ignition Control - Event information",
+      "possible_causes": "Spark plug(s) fault; Wiring harness fault; Ignition coil(s) fault",
+      "action": "Refer to repair manual and check spark plug(s) for condition and security. Replace any defective components as required. Refer to electrical wiring diagrams and check ignition coil circuit for intermittent open circuit, short circuit to power, short circuit to ground. Check and install a new coil(s) as required."
+    },
+    "B11DB-01": {
+      "description": "Battery Monitoring Module - General electrical failure",
+      "possible_causes": "NOTE: Circuit BATTERY; Charging system fault; Battery monitoring signal line circuit fault; Vehicle battery fault",
+      "action": "Refer to electrical wiring diagrams and check charging system for faults. Perform any repairs required. Refer to the electrical wiring diagrams and check the battery monitoring system module circuit for open circuit, short circuit to ground, short circuit to power. Refer to the workshop manual and the battery care manual, inspect the vehicle battery and ensure it is fully charged and serviceable before performing further tests."
+    },
+    "B11DB-87": {
+      "description": "Battery Monitoring Module - Missing message",
+      "possible_causes": "NOTE: Circuit BATTERY; Battery signal line circuit fault",
+      "action": "Refer to the electrical wiring diagrams and check the battery monitoring system module circuit for open circuit, short circuit to ground, short circuit to power. Refer to the electrical circuit diagrams and check the LIN circuit for short circuit to ground, short circuit to power, open circuit."
+    },
+    "B1206-68": {
+      "description": "Crash Occurred - Event information",
+      "possible_causes": "NOTE: Circuit SRS_SIGNAL; Engine control module has detected the vehicle has crashed (event information DTC only)",
+      "action": "Refer to the electrical circuit diagrams and check the engine control module to restraints control module circuit for short circuit to ground, short circuit to power, open circuit. Repair circuit as required, clear the DTC and retest."
+    },
+    "C0031-00": {
+      "description": "Left Front Wheel Speed Sensor - No sub type information",
+      "possible_causes": "Invalid data received from anti-lock braking system module (left front wheel speed signal fault)",
+      "action": "Check anti-lock braking system module for related DTCs and refer to relevant DTC index."
+    },
+    "C0034-00": {
+      "description": "Right Front Wheel Speed Sensor - No sub type information",
+      "possible_causes": "Invalid data received from anti-lock braking system module (right front wheel speed signal fault)",
+      "action": "Check anti-lock braking system module for related DTCs and refer to relevant DTC index."
+    },
+    "C0037-00": {
+      "description": "Left Rear Wheel Speed Sensor - No sub type information",
+      "possible_causes": "Invalid data received from anti-lock braking system module (left rear wheel speed signal fault)",
+      "action": "Check anti-lock braking system module for related DTCs and refer to relevant DTC index."
+    },
+    "C003A-00": {
+      "description": "Right Rear Wheel Speed Sensor - No sub type information",
+      "possible_causes": "Invalid data received from anti-lock braking system module (right rear wheel speed signal fault)",
+      "action": "Check anti-lock braking system module for related DTCs and refer to relevant DTC index."
+    },
+    "P0010-13": {
+      "description": "Intake (A) Camshaft Position Actuator (Bank 1) - Circuit open",
+      "possible_causes": "NOTE: Circuit VFS_IN_A; Intake (A) camshaft position actuator (Bank 1) open circuit; Engine control module interface harness open circuit",
+      "action": "Refer to the electrical circuit diagrams and check intake (A) camshaft position actuator (Bank 1) circuit for open circuit. Refer to the electrical circuit diagrams and check engine control module interface harness for open circuit."
+    },
+    "P0011-00": {
+      "description": "Intake (A) Camshaft Position Timing - Over-Advanced (Bank 1) - No sub type information",
+      "possible_causes": "NOTE: Circuit VFS_IN_A; Intake (A) camshaft position actuator (Bank 1) open circuit; Engine control module interface harness open circuit",
+      "action": "Refer to the electrical circuit diagrams and check intake (A) camshaft position actuator (Bank 1) circuit for open circuit. Refer to the electrical circuit diagrams and check engine control module interface harness for open circuit."
+    },
+    "P0013-13": {
+      "description": "Exhaust (B) Camshaft Position Actuator (Bank 1) - Circuit open",
+      "possible_causes": "NOTE: Circuit VFS_EX_A; Exhaust (B) camshaft position actuator (Bank 1) open circuit; Engine control module interface harness open circuit",
+      "action": "Refer to the electrical circuit diagrams and check exhaust (B) camshaft position actuator (Bank 1) circuit for open circuit. Refer to the electrical circuit diagrams and check engine control module interface harness for open circuit."
+    },
+    "P0015-00": {
+      "description": "Exhaust (B) Camshaft Position Timing - Over-Retarded (Bank 1) - No sub type information",
+      "possible_causes": "NOTE: Circuit VFS_EX_A; Exhaust (B) camshaft position actuator (Bank 1) open circuit, short circuit to ground, short circuit to power",
+      "action": "Check for related DTC P0365-00. Refer to the electrical circuit diagrams and check exhaust (B) camshaft position actuator (Bank 1) for open circuit, short circuit to ground, short circuit to power."
+    },
+    "P0016-00": {
+      "description": "Crankshaft Position - Camshaft Position Correlation (Bank 1 Sensor A) - No sub type information",
+      "possible_causes": "NOTE: Circuit VFS_IN_A; The relative positions of the crankshaft position sensor and cam timing plate teeth are not correct; Engine timing incorrect; Timing chain installed incorrectly; Variable valve timing forced fully advanced",
+      "action": "Check engine timing. Check camshaft sensor timing plate is installed correctly. Check timing chain is installed correctly."
+    },
+    "P0017-00": {
+      "description": "Crankshaft Position - Camshaft Position Correlation (Bank 1 Sensor B) - No sub type information",
+      "possible_causes": "NOTE: Circuit VFS_EX_A; The relative positions of the crankshaft position sensor and camshaft timing plate teeth are not correct; Engine timing incorrect; Timing chain installed incorrectly; Variable valve timing forced fully advanced",
+      "action": "Check for related DTC P0365-00. Check engine timing. Check camshaft sensor timing plate is installed correctly. Check timing chain is installed correctly. Refer to the electrical circuit diagrams and check exhaust (B) camshaft position actuator (Bank 1) for open circuit, short circuit to ground, short circuit to power."
+    },
+    "P0018-00": {
+      "description": "Crankshaft Position - Camshaft Position Correlation (Bank 2 Sensor A) - No sub type information",
+      "possible_causes": "NOTE: Circuit VFS_IN_B; The relative positions of the crankshaft position sensor and camshaft timing plate teeth are not correct; Engine timing incorrect; Timing chain installed incorrectly; Variable valve timing forced fully advanced",
+      "action": "Check engine timing. Check camshaft sensor timing plate is installed correctly. Check timing chain is installed correctly."
+    },
+    "P0019-00": {
+      "description": "Crankshaft Position - Camshaft Position Correlation (Bank 2 Sensor B) - No sub type information",
+      "possible_causes": "NOTE: Circuit VFS_EX_B; The relative positions of the crankshaft position sensor and camshaft timing plate teeth are not correct; Engine timing incorrect; Timing chain installed incorrectly; Variable valve timing forced fully advanced",
+      "action": "Check engine timing. Check camshaft sensor timing plate is installed correctly. Check timing chain is installed correctly."
+    },
+    "P001A-13": {
+      "description": "Intake (A) Cam Profile Control Circuit (Bank 1) - Circuit open",
+      "possible_causes": "NOTE: Circuit CPS_A; Camshaft profile switching solenoid bank 1 open circuit",
+      "action": "Refer to the electrical circuit diagrams and check camshaft profile switching solenoid bank 1 for open circuit."
+    },
+    "P001B-11": {
+      "description": "Intake (A) Cam Profile Control Circuit Low (Bank 1) - Circuit short to ground",
+      "possible_causes": "NOTE: Circuit CPS_A; Camshaft profile switching solenoid bank 1 circuit short circuit to ground",
+      "action": "Refer to the electrical circuit diagrams and check camshaft profile switching solenoid bank 1 circuit for short circuit to ground."
+    },
+    "P001C-12": {
+      "description": "Intake (A) Cam Profile Control Circuit High (Bank 1) - Circuit short to battery",
+      "possible_causes": "NOTE: Circuit CPS_A; Camshaft profile switching solenoid bank 1 circuit short circuit to power",
+      "action": "Refer to the electrical circuit diagrams and check camshaft profile switching solenoid bank 1 circuit for short circuit to power."
+    },
+    "P001D-13": {
+      "description": "Intake (A) Cam Profile Control Circuit (Bank 2) - Circuit open",
+      "possible_causes": "NOTE: Circuit CPS_B; Camshaft profile switching solenoid bank 2 open circuit",
+      "action": "Refer to the electrical circuit diagrams and check camshaft profile switching solenoid bank 2 for open circuit."
+    },
+    "P001E-11": {
+      "description": "Intake (A) Cam Profile Control Circuit Low (Bank 2) - Circuit short to ground",
+      "possible_causes": "NOTE: Circuit CPS_B; Camshaft profile switching solenoid bank 2 circuit short circuit to ground",
+      "action": "Refer to the electrical circuit diagrams and check camshaft profile switching solenoid bank 2 circuit for short circuit to ground."
+    },
+    "P001F-12": {
+      "description": "Intake (A) Cam Profile Control Circuit High (Bank 2) - Circuit short to battery",
+      "possible_causes": "NOTE: Circuit CPS_B; Camshaft profile switching solenoid bank 2 circuit short circuit to power",
+      "action": "Refer to the electrical circuit diagrams and check camshaft profile switching solenoid bank 2 circuit for short circuit to power."
+    },
+    "P0020-13": {
+      "description": "Intake (A) Camshaft Position Actuator (Bank 2) - Circuit open",
+      "possible_causes": "NOTE: Circuit VFS_IN_B; Intake valve solenoid 2 open circuit",
+      "action": "Refer to the electrical circuit diagrams and check intake valve solenoid 2 for open circuit."
+    },
+    "P0023-13": {
+      "description": "Exhaust (B) Camshaft Position Actuator (Bank 2) - Circuit open",
+      "possible_causes": "NOTE: Circuit VFS_EX_B; Exhaust (B) Camshaft Position actuator (Bank 2) circuit, open circuit",
+      "action": "Refer to the electrical circuit diagrams and check exhaust (B) camshaft position actuator (Bank 2) circuit for open circuit."
+    },
+    "P0026-72": {
+      "description": "Intake Valve Control Solenoid Circuit Range/Performance (Bank 1) - Actuator stuck open",
+      "possible_causes": "NOTE: Circuit VFS_IN_A; Intake valve solenoid 1 angle less than target; Intake valve solenoid 1 slow or not operating",
+      "action": "Check operation of intake valve solenoid 1. Check and install a new intake valve solenoid 1 as required."
+    },
+    "P0026-77": {
+      "description": "Intake Valve Control Solenoid Circuit Range/Performance (Bank 1) - Commanded position not reachable",
+      "possible_causes": "NOTE: Circuit VFS_IN_A; Intake valve solenoid 1 angle greater than Target; Intake valve solenoid 1 not returning to target in time; Intake valve solenoid 1 stuck advanced",
+      "action": "Check operation of intake valve solenoid 1. Check and install a new intake valve solenoid 1 as required."
+    },
+    "P0027-72": {
+      "description": "Exhaust Valve Control Solenoid Circuit Range/Performance (Bank 1) - Actuator stuck open",
+      "possible_causes": "NOTE: Circuit VFS_EX_A; Exhaust valve solenoid 1 angle less than target; Exhaust valve solenoid 1 slow or not operating",
+      "action": "Check operation of exhaust valve solenoid 1. Check and install a new exhaust valve solenoid 1 as required."
+    },
+    "P0027-77": {
+      "description": "Exhaust Valve Control Solenoid Circuit Range/Performance (Bank 1) - Commanded position not reachable",
+      "possible_causes": "NOTE: Circuit VFS_EX_A; Exhaust valve solenoid 1 angle greater than target; Exhaust valve solenoid 1 not returning to target in time; Exhaust valve solenoid 1 stuck advanced",
+      "action": "Check operation of exhaust valve solenoid 1. Check and install a new exhaust valve solenoid 1 as required."
+    },
+    "P0028-72": {
+      "description": "Intake Valve Control Solenoid Circuit Range/Performance (Bank 2) - Actuator stuck open",
+      "possible_causes": "NOTE: Circuit VFS_IN_B; Intake valve solenoid 2 angle less than target; Intake valve solenoid 2 slow or not operating",
+      "action": "Check operation of intake valve solenoid 2. Check and install a new intake valve solenoid 2 as required."
+    },
+    "P0028-77": {
+      "description": "Intake Valve Control Solenoid Circuit Range/Performance (Bank 2) - Commanded position not reachable",
+      "possible_causes": "NOTE: Circuit VFS_IN_B; Intake valve solenoid 2 angle greater than target; Intake valve solenoid 2 not returning to target in time; Intake valve solenoid 2 stuck advanced",
+      "action": "Check operation of intake valve solenoid 2. Check and install a new intake valve solenoid 2 as required."
+    },
+    "P0029-72": {
+      "description": "Exhaust Valve Control Solenoid Circuit Range/Performance (Bank 2) - Actuator stuck open",
+      "possible_causes": "NOTE: Circuit VFS_EX_B; Exhaust valve solenoid 2 angle less than target; Exhaust valve solenoid 2 slow or not operating",
+      "action": "Check operation of exhaust valve solenoid 2. Check and install a new exhaust valve solenoid 2 as required."
+    },
+    "P0029-77": {
+      "description": "Exhaust Valve Control Solenoid Circuit Range/Performance (Bank 2) - Commanded position not reachable",
+      "possible_causes": "NOTE: Circuit VFS_EX_B; Exhaust valve solenoid 2 angle greater than target; Exhaust valve solenoid 2 not returning to target in time; Exhaust valve solenoid 2 stuck advanced",
+      "action": "Check operation of exhaust valve solenoid 2. Check and install a new exhaust valve solenoid 2 as required."
+    },
+    "P0031-11": {
+      "description": "HO2S Heater Control Circuit Low (Bank 1, Sensor 1) - Circuit short to ground",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_A_UPSTREAM (LR: UHEGO_HEATER_A); Pre-catalyst oxygen sensor-odd heater control circuit short to ground",
+      "action": "Using the manufacturer approved diagnostic system check datalogger signal 0x0341. Refer to electrical circuit diagrams and check pre-catalyst oxygen sensor-odd heater control circuit for short to ground."
+    },
+    "P0031-13": {
+      "description": "HO2S Heater Control Circuit Low (Bank 1, Sensor 1) - Circuit open",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_A_UPSTREAM (LR: UHEGO_HEATER_A); Pre-catalyst oxygen sensor-odd heater control circuit open",
+      "action": "Using the manufacturer approved diagnostic system check datalogger signal 0x03A1. Refer to electrical circuit diagrams and check pre-catalyst oxygen sensor-odd heater control circuit for open circuit."
+    },
+    "P0032-12": {
+      "description": "HO2S Heater Control Circuit High (Bank 1, Sensor 1) - Circuit short to battery",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_A_UPSTREAM (LR: UHEGO_HEATER_A); Pre-catalyst oxygen sensor-odd heater control circuit short to power",
+      "action": "Using the manufacturer approved diagnostic system check datalogger signal 0x0341. Refer to electrical circuit diagrams and check pre-catalyst oxygen sensor-odd heater control circuit for short to power."
+    },
+    "P0036-00": {
+      "description": "HO2S Heater Control Circuit (Bank 1, Sensor 2) - No sub type information",
+      "possible_causes": "NOTE: Circuit HTR_HEGO_A; Catalyst oxygen sensor heater circuit control fuse failure; Post catalyst oxygen sensor-odd heater control circuit short to ground, power, or open; Catalyst oxygen sensor heater circuit control relay failure; Post catalyst oxygen sensor-odd failure",
+      "action": "Check datalogger signal 0x0342. Check sensor fuse. Check sensor circuit for short/open. Check heater control relay. Check/install new sensor or relay as required."
+    },
+    "P003C-00": {
+      "description": "A Camshaft Profile Control Performance/Stuck Off (Bank 1) - No sub type information",
+      "possible_causes": "NOTE: Circuit CPS_A; Oil supply blockage to camshaft profile switching solenoid; Catalyst oxygen sensor failure giving false flag; Camshaft profile switching solenoid bank 1 circuit fault; Camshaft profile switching solenoid bank 1 failure",
+      "action": "Check for presence of oil at solenoid. Check for catalyst O2 sensor DTCs. Check solenoid circuit. Check and install new solenoid as required."
+    },
+    "P003E-00": {
+      "description": "A Camshaft Profile Control Performance/Stuck Off (Bank 2) - No sub type information",
+      "possible_causes": "NOTE: Circuit CPS_B; Oil supply blockage to camshaft profile switching solenoid; Catalyst oxygen sensor failure giving false flag; Camshaft profile switching solenoid bank 2 circuit fault; Camshaft profile switching solenoid bank 2 failure",
+      "action": "Check for presence of oil at solenoid. Check for catalyst O2 sensor DTCs. Check solenoid circuit. Check and install new solenoid as required."
+    },
+    "P0051-11": {
+      "description": "HO2S Heater Control Circuit Low (Bank 2, Sensor 1) - Circuit short to ground",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_B_UPSTREAM (LR: UHEGO_HEATER_B); Pre-catalyst oxygen sensor-even heater control circuit short to ground",
+      "action": "Check datalogger signal 0x0344. Check circuit for short to ground."
+    },
+    "P0051-13": {
+      "description": "HO2S Heater Control Circuit Low (Bank 2, Sensor 1) - Circuit open",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_B_UPSTREAM (LR: UHEGO_HEATER_B); Pre-catalyst oxygen sensor-even heater control circuit open",
+      "action": "Check datalogger signal 0x0344. Check circuit for open circuit."
+    },
+    "P0052-12": {
+      "description": "HO2S Heater Control Circuit High (Bank 2, Sensor 1) - Circuit short to battery",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_B_UPSTREAM (LR: UHEGO_HEATER_B); Pre-catalyst oxygen sensor-even heater control circuit short to power",
+      "action": "Check datalogger signal 0x0344. Check circuit for short to power."
+    },
+    "P0054-00": {
+      "description": "HO2S Heater Resistance (Bank 1, Sensor 2) - No sub type information",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_A_UPSTREAM (LR: UHEGO_HEATER_A); Catalyst oxygen sensor heater circuit fuse failure; Post catalyst oxygen sensor-odd heater control circuit fault; Relay failure",
+      "action": "Check datalogger signal 0x03A1. Check sensor fuse. Check circuit for short/open/high resistance. Check relay. Replace components as required."
+    },
+    "P0056-00": {
+      "description": "HO2S Heater Control Circuit (Bank 2, Sensor 2) - No sub type information",
+      "possible_causes": "NOTE: Circuit HTR_HEGO_B; Post catalyst oxygen sensor-even heater control circuit fault; Relay failure; Sensor failure",
+      "action": "Check datalogger signal 0x0345. Check sensor circuit. Check relay. Replace components as required."
+    },
+    "P0060-00": {
+      "description": "HO2S Heater Resistance (Bank 2, Sensor 2) - No sub type information",
+      "possible_causes": "NOTE: Circuit HTR_CTRL_B_UPSTREAM (LR: UHEGO_HEATER_B); Sensor/circuit/relay/fuse faults",
+      "action": "Check datalogger signal 0x03A5. Check fuse, circuit, relay, and sensor."
+    },
+    "P0069-29": {
+      "description": "MAP - Barometric Pressure Correlation - Signal invalid",
+      "possible_causes": "MAP sensor failure; Engine control module failure",
+      "action": "Check datalogger signal 0x035A. Check MAP sensor DTCs. Check MAP circuit. Replace MAP sensor or ECM as required."
+    },
+    "P0071-21": {
+      "description": "Ambient Air Temperature Sensor Range/Performance - Signal amplitude < minimum",
+      "possible_causes": "NOTE: Circuit AMBIENT_TEMP_SENSOR (LR: TAMB_TEMP); Ambient air temperature sensor circuit short/open; Temperature/MAP sensor circuit short/open; Sensor failure",
+      "action": "Check datalogger signal 0x038A. Check circuits. Replace Ambient Air Temp sensor or T-MAP sensor as required."
+    },
+    "P0071-22": {
+      "description": "Ambient Air Temperature Sensor Range/Performance - Signal amplitude > maximum",
+      "possible_causes": "NOTE: Circuit AMBIENT_TEMP_SENSOR (LR: TAMB_TEMP); Circuit short to ground/power/open; Sensor failure",
+      "action": "Check datalogger signal 0x038A. Check circuits. Replace Ambient Air Temp sensor or T-MAP sensor as required."
+    },
+    "P0072-00": {
+      "description": "Ambient Air Temperature Sensor Circuit Low - No sub type information",
+      "possible_causes": "NOTE: Circuit AMBIENT_TEMP_SENSOR (LR: TAMB_TEMP); Circuit short to ground/open/high resistance; Sensor failure",
+      "action": "Check datalogger signal 0x038A. Check circuit. Replace sensor as required."
+    },
+    "P0073-00": {
+      "description": "Ambient Air Temperature Sensor Circuit High - No sub type information",
+      "possible_causes": "NOTE: Circuit AMBIENT_TEMP_SENSOR (LR: TAMB_TEMP); Circuit short to power/ground/high resistance; Sensor failure",
+      "action": "Check datalogger signal 0x038A. Check circuit and connector. Replace sensor as required."
+    },
+    "P007B-23": {
+      "description": "Charge Air Cooler Temperature Sensor Circuit Range/Performance (Bank 1) - Signal stuck low",
+      "possible_causes": "Battery disconnection; Electric block heater; Sensor circuit fault; Connector fault; Sensor failure",
+      "action": "Check temp sensors soak correlation (0xF446, 0xF405, 0x0341, 0xF40F, 0x0489). Check circuit and connector. Replace sensor."
+    },
+    "P007B-24": {
+      "description": "Charge Air Cooler Temperature Sensor Circuit Range/Performance (Bank 1) - Signal stuck high",
+      "possible_causes": "Battery disconnection; Fuse failure; Sensor circuit fault; Connector fault; Pump failure",
+      "action": "Check temp sensors soak correlation. Check fuse. Check circuit/connector. Check air charge coolant pump."
+    },
+    "P007B-29": {
+      "description": "Charge Air Cooler Temperature Sensor Circuit Range/Performance (Bank 1) - Signal invalid",
+      "possible_causes": "Battery disconnection; Fuse failure; Sensor circuit fault; Connector fault; Pump failure",
+      "action": "Check temp sensors soak correlation. Check fuse. Check circuit/connector. Check air charge coolant pump."
+    },
+    "P0087-00": {
+      "description": "Fuel Rail/System Pressure - Too Low",
+      "possible_causes": "NOTE: Circuit FUEL_HIGH_PRESS_SENSOR; Fuel rail pressure sensor circuit fault; Sensor failure; Fuel lines leaking/restricted; Fuel pump failure",
+      "action": "Check datalogger 0x0377. Check sensor circuit. Check fuel lines and pump."
+    },
+    "P0088-00": {
+      "description": "Fuel Rail/System Pressure - Too High",
+      "possible_causes": "NOTE: Circuit FUEL_HIGH_PRESS_SENSOR; Fuel rail pressure sensor circuit short/high resistance; Sensor failure",
+      "action": "Check datalogger 0x0377. Check sensor circuit. Replace sensor as required."
+    },
+    "P008A-00": {
+      "description": "Low Pressure Fuel System Pressure - Too Low",
+      "possible_causes": "NOTE: Circuit LOW_PRESS_FUEL_PRESS_SENSOR; Low pressure fuel sensor circuit fault; Fuel pump driver module circuit fault; Sensor/Module failure",
+      "action": "Check datalogger 0x0376. Check fuel system for leaks. Check sensor and driver module circuits."
+    },
+    "P008B-00": {
+      "description": "Low Pressure Fuel System Pressure - Too High",
+      "possible_causes": "NOTE: Circuit LOW_PRESS_FUEL_PRESS_SENSOR; Low pressure fuel sensor circuit fault; Blockage in low pressure fuel line; Sensor/Module failure",
+      "action": "Check datalogger 0x0376. Check sensor circuit. Check for blockages. Check driver module circuit."
+    },
+    "P00AB-23": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Range/Performance (Bank 2) - Signal stuck low",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_B; Circuit short to ground/open; Sensor failure",
+      "action": "Check datalogger 0x0312. Check circuit. Replace sensor as required."
+    },
+    "P00AB-24": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Range/Performance (Bank 2) - Signal stuck high",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_B; Circuit short to power; Sensor failure",
+      "action": "Check datalogger 0x0312. Check circuit. Replace sensor as required."
+    },
+    "P00AB-29": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Range/Performance (Bank 2) - Signal invalid",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_B; Circuit short to ground/power/open; Sensor failure",
+      "action": "Check datalogger 0x0312. Check circuit. Replace sensor as required."
+    },
+    "P00AC-00": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Low (Bank 2)",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_B; Circuit short to ground/open/high resistance; Sensor failure",
+      "action": "Check datalogger 0x0312. Check circuit. Replace sensor as required."
+    },
+    "P00AD-00": {
+      "description": "Intake Air Temperature Sensor 1 Circuit High (Bank 2)",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_B; Circuit short to power/ground/open/high resistance; Sensor failure",
+      "action": "Check datalogger 0x0312. Check circuit. Replace sensor as required."
+    },
+    "P00C6-00": {
+      "description": "Fuel Rail Pressure Too Low - Engine Cranking",
+      "possible_causes": "No fuel at pump; Injector stuck open; Fuel pressure sensor signal stuck; Fuel pump failure",
+      "action": "Check fuel supply. Check for stuck injector. Check fuel pressure sensor (P0191-00). Check fuel pump."
+    },
+    "P0101-00": {
+      "description": "Mass or Volume Air Flow A Circuit Range/Performance",
+      "possible_causes": "Intake air leak; Blocked air cleaner; Blocked engine breather; MAF sensor seal failure; Connector/circuit fault; Carbon on throttle blade; Blocked injectors/catalysts; Sensor failure",
+      "action": "Smoke test intake. Check air cleaner/breather/MAF seal. Check circuit/connectors. Clean throttle blade. Check injectors/catalysts. Reset adaptions. Replace MAF."
+    },
+    "P0102-00": {
+      "description": "Mass or Volume Air Flow A Circuit Low",
+      "possible_causes": "Fuse failure; Connector/circuit fault; Sensor failure",
+      "action": "Check fuse. Check connector/circuit. Reset adaptions. Replace MAF."
+    },
+    "P0103-00": {
+      "description": "Mass or Volume Air Flow A Circuit High",
+      "possible_causes": "Connector/circuit fault; Blocked air cleaner/intake; Sensor failure",
+      "action": "Check datalogger 0x0314. Check connector/circuit. Check air intake. Reset adaptions. Replace MAF."
+    },
+    "P0106-00": {
+      "description": "Manifold Absolute Pressure/BARO Sensor Range/Performance",
+      "possible_causes": "NOTE: Circuit MAP_SENSOR; Blocked air cleaner; Intake leak; Circuit fault; Engine breather leak; Carbon on throttle; Blocked exhaust; Sensor failure",
+      "action": "Check air cleaner/intake/breather. Check circuit. Check throttle/exhaust. Replace MAP."
+    },
+    "P0107-00": {
+      "description": "Manifold Absolute Pressure/BARO Sensor Low",
+      "possible_causes": "NOTE: Circuit MAP_SENSOR; Circuit short to ground/open/high resistance; Sensor failure",
+      "action": "Check circuit. Replace MAP sensor."
+    },
+    "P0108-00": {
+      "description": "Manifold Absolute Pressure/BARO Sensor High",
+      "possible_causes": "NOTE: Circuit MAP_SENSOR; Circuit short to power/open/high resistance; Sensor failure",
+      "action": "Check circuit. Replace MAP sensor."
+    },
+    "P010B-00": {
+      "description": "Mass or Volume Air Flow B Circuit Range/Performance",
+      "possible_causes": "Same causes as P0101-00",
+      "action": "Same actions as P0101-00."
+    },
+    "P010C-00": {
+      "description": "Mass or Volume Air Flow B Circuit Low",
+      "possible_causes": "Same causes as P0102-00",
+      "action": "Same actions as P0102-00."
+    },
+    "P010D-00": {
+      "description": "Mass or Volume Air Flow B Circuit High",
+      "possible_causes": "Same causes as P0103-00",
+      "action": "Check datalogger 0x0503. Same actions as P0103-00."
+    },
+    "P010F-00": {
+      "description": "Mass or Volume Air Flow Sensor A/B Correlation",
+      "possible_causes": "Same causes as P0101-00",
+      "action": "Same actions as P0101-00."
+    },
+    "P0111-23": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Range/Performance - Signal stuck low",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_A; Circuit short to ground/open/high resistance; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0111-24": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Range/Performance - Signal stuck high",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_A; Circuit short to power/open; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0111-29": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Range/Performance - Signal invalid",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_A; Circuit short to ground/power/open; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0112-00": {
+      "description": "Intake Air Temperature Sensor 1 Circuit Low (Bank 1)",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_A; Circuit short to ground/power/open/high resistance; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0113-00": {
+      "description": "Intake Air Temperature Sensor 1 Circuit High (Bank 1)",
+      "possible_causes": "NOTE: Circuit INLET_AIR_TEMP_SENSOR_A; Circuit short to power/open/high resistance; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0116-23": {
+      "description": "Engine Coolant Temperature Sensor 1 Circuit Range/Performance - Signal stuck low",
+      "possible_causes": "NOTE: Circuit COOLANT_TEMP_SENSOR; Battery reset when hot; Intermittent high resistance; Sensor failure",
+      "action": "Check datalogger 0x0357. Check P2610-87. Check circuit. Replace sensor."
+    },
+    "P0116-24": {
+      "description": "Engine Coolant Temperature Sensor 1 Circuit Range/Performance - Signal stuck high",
+      "possible_causes": "NOTE: Circuit COOLANT_TEMP_SENSOR; Battery reset when hot; Intermittent high resistance; Sensor failure",
+      "action": "Check datalogger 0x0357. Check P2610-87. Check circuit. Replace sensor."
+    },
+    "P0116-29": {
+      "description": "Engine Coolant Temperature Sensor 1 Circuit Range/Performance - Signal invalid",
+      "possible_causes": "NOTE: Circuit COOLANT_TEMP_SENSOR; Battery reset when hot; Low coolant; Intermittent high resistance; Sensor failure; Airlock",
+      "action": "Fill/bleed coolant. Check datalogger 0x0357. Check circuit. Replace sensor."
+    },
+    "P0117-16": {
+      "description": "Engine Coolant Temperature Sensor 1 Circuit Low",
+      "possible_causes": "NOTE: Circuit COOLANT_TEMP_SENSOR; Circuit short to ground; Sensor failure",
+      "action": "Check datalogger 0x0357. Check circuit. Replace sensor."
+    },
+    "P0118-17": {
+      "description": "Engine Coolant Temperature Sensor 1 Circuit High",
+      "possible_causes": "NOTE: Circuit COOLANT_TEMP_SENSOR; Circuit short to power/open/disconnected; Sensor failure",
+      "action": "Check datalogger 0x0357. Check circuit. Replace sensor."
+    },
+    "P0121-00": {
+      "description": "Throttle/Pedal Position Sensor A Circuit Range/Performance",
+      "possible_causes": "TPS1/TPS2 signal difference; Circuit short/high resistance; Harness failure; Throttle unit failure; ECM failure",
+      "action": "Check datalogger 0xF447, 0xF411. Check alignment. Check circuits/connectors. Replace throttle unit/ECM if failed."
+    },
+    "P0122-00": {
+      "description": "Throttle/Pedal Position Sensor A Circuit Low",
+      "possible_causes": "TPS1 signal out of range; Circuit open/short to ground; Harness/Throttle/ECM failure",
+      "action": "Check circuits/connectors. Replace throttle unit/ECM if failed."
+    },
+    "P0123-00": {
+      "description": "Throttle/Pedal Position Sensor A Circuit High",
+      "possible_causes": "NOTE: Circuit THROTTLE_POSITION_SENSOR_1; Circuit short to ground/power/open; Sensor failure",
+      "action": "Check circuits. Check throttle unit. Replace as required."
+    },
+    "P0125-00": {
+      "description": "Insufficient Coolant Temp For Closed Loop Fuel Control",
+      "possible_causes": "Coolant temp sensor 1 circuit open/high resistance; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0126-26": {
+      "description": "Insufficient Coolant Temp For Stable Operation",
+      "possible_causes": "Thermostat stuck open; Circuit short/open",
+      "action": "Check circuit. Check for related faults. Replace thermostat."
+    },
+    "P0128-00": {
+      "description": "Coolant Thermostat (Coolant Temp Below Thermostat Regulating Temperature)",
+      "possible_causes": "Thermostat stuck open; Cooling fans running continuously",
+      "action": "Check cooling fans. Replace thermostat."
+    },
+    "P0131-00": {
+      "description": "O2 Sensor Circuit Low Voltage (Bank 1 Sensor 1) - No sub type",
+      "possible_causes": "Sensor disconnected; Variable circuit short to ground/open; Heater fault; Sensor failure",
+      "action": "Check connection. Check circuit. Check heater. Replace sensor."
+    },
+    "P0131-1A": {
+      "description": "O2 Sensor Circuit Low Voltage (Bank 1 Sensor 1) - Circuit resistance below threshold",
+      "possible_causes": "NOTE: Circuit UHEGO_A_VARIABLE; Sensor disconnected; Circuit short to ground/open; Heater fault; Sensor failure",
+      "action": "Check connection. Check circuit. Check heater. Replace sensor."
+    },
+    "P0132-00": {
+      "description": "O2 Sensor Circuit High Voltage (Bank 1 Sensor 1) - No sub type",
+      "possible_causes": "Sensor disconnected; Circuit short to power/open; Heater fault; Sensor failure",
+      "action": "Check connection. Check circuit. Check heater. Replace sensor."
+    },
+    "P0132-18": {
+      "description": "O2 Sensor Circuit High Voltage (Bank 1 Sensor 1) - Circuit resistance above threshold",
+      "possible_causes": "NOTE: Circuit UHEGO_A_VARIABLE; Sensor disconnected; Circuit short to power/open; Heater fault; Sensor failure",
+      "action": "Check connection. Check circuit. Check heater. Replace sensor."
+    },
+    "P0133-00": {
+      "description": "O2 Sensor Circuit Slow Response (Bank 1 Sensor 1)",
+      "possible_causes": "NOTE: Circuit UHEGO_A_VARIABLE; Sensor installation; Exhaust leak; Wiring shield high resistance; Fuel control fault; Sensor failure",
+      "action": "Check installation. Check for leaks. Check wiring shield. Check fuel system. Replace sensor."
+    },
+    "P0134-00": {
+      "description": "O2 Sensor Circuit No Activity Detected (Bank 1 Sensor 1)",
+      "possible_causes": "NOTE: Circuit UHEGO_A_VARIABLE; Circuit short/open; Sensor failure",
+      "action": "Check circuits. Replace sensor."
+    },
+    "P0137-00": {
+      "description": "O2 Sensor Circuit Low Voltage (Bank 1 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_A; Circuit short to ground/high resistance/open; Damaged/blocked catalyst; Air leak; Sensor failure",
+      "action": "Check circuits. Check catalyst. Check for leaks. Replace sensor."
+    },
+    "P0138-00": {
+      "description": "O2 Sensor Circuit High Voltage (Bank 1 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_A; Circuit short to power; Sensor tip damage/poisoned; Blocked catalyst; Sensor failure",
+      "action": "Check circuits. Check sensor tip. Check catalyst. Replace sensor/catalyst."
+    },
+    "P0139-00": {
+      "description": "O2 Sensor Circuit Slow Response (Bank 1 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_A; Excessive oil consumption; Sensor tip damage/poisoned",
+      "action": "Check oil consumption. Check sensor tip. Replace sensor."
+    },
+    "P0140-00": {
+      "description": "O2 Sensor Circuit No Activity Detected (Bank 1 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_A; Circuit fault; Air leak; Sensor tip damage/poisoned; Sensor failure",
+      "action": "Check circuits. Check for leaks. Check sensor tip. Replace sensor."
+    },
+    "P0141-00": {
+      "description": "O2 Heater Circuit (Bank 1, Sensor 2)",
+      "possible_causes": "NOTE: Circuit HTR_HEGO_A; Circuit/Fuse/Relay fault; Sensor failure",
+      "action": "Check datalogger 0x03A2. Check circuits, fuse, and relay. Replace sensor/relay."
+    },
+    "P0148-65": {
+      "description": "Fuel Delivery Error - Signal has too few transitions/events",
+      "possible_causes": "Injector circuit fault; Injector failure; ECM failure",
+      "action": "Check injector DTCs. Check circuits. Replace injector(s) or ECM."
+    },
+    "P0148-66": {
+      "description": "Fuel Delivery Error - Signal has too many transitions/events",
+      "possible_causes": "Injector circuit fault; Injector failure; ECM failure",
+      "action": "Check injector DTCs. Check circuits. Replace injector(s) or ECM."
+    },
+    "P0149-32": {
+      "description": "Fuel Timing Error - Signal low times minimum",
+      "possible_causes": "Injector circuit fault; Injector failure; ECM failure",
+      "action": "Check injector DTCs. Check circuits. Replace injector(s) or ECM."
+    },
+    "P0149-35": {
+      "description": "Fuel Timing Error - Signal high time maximum",
+      "possible_causes": "Injector circuit fault; Injector failure; ECM failure",
+      "action": "Check injector DTCs. Check circuits. Replace injector(s) or ECM."
+    },
+    "P0151-14": {
+      "description": "O2 Sensor Circuit Low Voltage (Bank 2 Sensor 1) - Circuit resistance below threshold",
+      "possible_causes": "NOTE: Circuit UHEGO_B_VARIABLE; Circuit short to ground; Sensor failure",
+      "action": "Check circuits. Replace sensor."
+    },
+    "P0152-18": {
+      "description": "O2 Sensor Circuit Low Voltage (Bank 2 Sensor 1) - Circuit resistance above threshold",
+      "possible_causes": "NOTE: Circuit UHEGO_B_VARIABLE; Circuit short to power/disconnected; Sensor failure",
+      "action": "Check circuits. Replace sensor."
+    },
+    "P0153-00": {
+      "description": "O2 Sensor Circuit Slow Response (Bank 2 Sensor 1)",
+      "possible_causes": "NOTE: Circuit UHEGO_B_VARIABLE; Exhaust leak; Wiring shield high resistance; Circuit short to ground; Fuel control fault; Sensor failure",
+      "action": "Check installation/leaks. Check wiring. Check fuel system. Replace sensor."
+    },
+    "P0154-00": {
+      "description": "O2 Sensor Circuit No Activity Detected (Bank 2 Sensor 1)",
+      "possible_causes": "NOTE: Circuit UHEGO_B_VARIABLE; Wiring shield high resistance; Circuit short to ground/high resistance/open; Sensor failure",
+      "action": "Check installation. Check wiring. Replace sensor."
+    },
+    "P0157-00": {
+      "description": "O2 Sensor Circuit Low Voltage (Bank 2 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_B; Circuit short to ground/high resistance/open; Air leak; Sensor tip damage; Sensor failure",
+      "action": "Check circuits. Check for leaks. Check sensor. Replace sensor."
+    },
+    "P0158-00": {
+      "description": "O2 Sensor Circuit High Voltage (Bank 2 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_B; Circuit short to power; Sensor tip damage; Sensor failure",
+      "action": "Check circuits. Check sensor. Replace sensor."
+    },
+    "P0159-00": {
+      "description": "O2 Sensor Circuit Slow Response (Bank 2 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_B; Excessive oil consumption; Sensor tip damage; Sensor failure",
+      "action": "Check oil consumption. Check sensor. Replace sensor."
+    },
+    "P0160-00": {
+      "description": "O2 Sensor Circuit No Activity Detected (Bank 2 Sensor 2)",
+      "possible_causes": "NOTE: Circuit HEGO_SENSOR_B; Circuit short/open/high resistance; Air leak; Sensor tip damage; Sensor failure",
+      "action": "Check circuits. Check for leaks. Check sensor. Replace sensor."
+    },
+    "P0161-00": {
+      "description": "O2 Heater Circuit (Bank 2, Sensor 2)",
+      "possible_causes": "NOTE: Circuit HTR_HEGO_B; Circuit/Fuse/Relay fault; Sensor failure",
+      "action": "Check datalogger 0x03A2. Check circuits, fuse, and relay. Replace sensor/relay."
+    },
+    "P0171-00": {
+      "description": "System Too Lean (Bank 1)",
+      "possible_causes": "Air leak upstream of MAF; MAF sensor circuit/failure; O2 sensor circuit/failure",
+      "action": "Check MAF/O2 circuits. Check intake leaks. Check related DTCs."
+    },
+    "P0172-00": {
+      "description": "System Too Rich (Bank 1)",
+      "possible_causes": "Restricted air cleaner; Leaking injector(s); MAF/O2 sensor circuit/failure",
+      "action": "Check MAF/O2 circuits. Check air cleaner. Check for leaking injectors. Check related DTCs."
+    },
+    "P0174-00": {
+      "description": "System Too Lean (Bank 2)",
+      "possible_causes": "Air leak upstream of MAF; MAF sensor circuit/failure; O2 sensor circuit/failure",
+      "action": "Check MAF/O2 circuits. Check intake leaks. Check related DTCs."
+    },
+    "P0175-00": {
+      "description": "System Too Rich (Bank 2)",
+      "possible_causes": "Restricted air cleaner; Leaking injector(s); MAF/O2 sensor circuit/failure",
+      "action": "Check MAF/O2 circuits. Check air cleaner. Check for leaking injectors. Check related DTCs."
+    },
+    "P018B-29": {
+      "description": "Fuel Pressure Sensor B Circuit Range/Performance - Signal invalid",
+      "possible_causes": "NOTE: Circuit LOW_PRESS_FUEL_PRESS_SENSOR; Filter/System restriction; Leak; Sensor circuit fault; Sensor failure",
+      "action": "Check datalogger 0x0376. Check for restrictions/leaks. Check circuits. Replace sensor."
+    },
+    "P018C-00": {
+      "description": "Fuel Pressure Sensor B Circuit Low",
+      "possible_causes": "NOTE: Circuit LOW_PRESS_FUEL_PRESS_SENSOR; Circuit fault; Sensor failure",
+      "action": "Check datalogger 0x0376. Check circuits. Replace sensor."
+    },
+    "P018D-00": {
+      "description": "Fuel Pressure Sensor B Circuit High",
+      "possible_causes": "NOTE: Circuit LOW_PRESS_FUEL_PRESS_SENSOR; Circuit fault; Sensor failure",
+      "action": "Check datalogger 0x0376. Check circuits. Replace sensor."
+    },
+    "P0191-00": {
+      "description": "Fuel Rail Pressure Sensor A Circuit Range/Performance",
+      "possible_causes": "NOTE: Circuit FUEL_HIGH_PRESS_SENSOR; Circuit fault; Sensor failure",
+      "action": "Check datalogger 0x0377. Check circuits. Replace sensor."
+    },
+    "P0192-00": {
+      "description": "Fuel Rail Pressure Sensor A Circuit Low",
+      "possible_causes": "NOTE: Circuit FUEL_HIGH_PRESS_SENSOR; Circuit short to ground/power/open; Sensor failure",
+      "action": "Check datalogger 0x0377. Check circuits. Replace sensor."
+    },
+    "P0193-00": {
+      "description": "Fuel Rail Pressure Sensor A Circuit High",
+      "possible_causes": "NOTE: Circuit FUEL_HIGH_PRESS_SENSOR; Circuit short to ground/power/open; Sensor failure",
+      "action": "Check datalogger 0x0377. Check circuits. Replace sensor."
+    },
+    "P0196-23": {
+      "description": "Engine Oil Temperature Sensor Range/Performance - Signal stuck low",
+      "possible_causes": "NOTE: Circuit OIL_QUALITY_SENSOR; Circuit short to ground/high resistance; Sensor failure",
+      "action": "Check datalogger 0x03F3. Check circuits. Replace sensor."
+    },
+    "P0196-24": {
+      "description": "Engine Oil Temperature Sensor Range/Performance - Signal stuck high",
+      "possible_causes": "NOTE: Circuit OIL_QUALITY_SENSOR; Circuit short to power; Sensor failure",
+      "action": "Check datalogger 0x03F3. Check circuits. Replace sensor."
+    },
+    "P0200-04": {
+      "description": "Injector Circuit - System internal failures",
+      "possible_causes": "ECM injector circuit power failure; ECM power/ground supply fault",
+      "action": "Check ECM injector power. Check ECM power/ground. Check for misfire DTCs."
+    },
+    "P0200-49": {
+      "description": "Injector Circuit - Internal electronic failure",
+      "possible_causes": "ECM failure",
+      "action": "Check for misfire DTCs. Replace ECM."
+    },
+    "P0200-48": {
+      "description": "Injector Circuit - Over temperature",
+      "possible_causes": "ECM failure",
+      "action": "If combined with misfire codes, replace ECM."
+    },
+    "P0201-13": {
+      "description": "Cylinder 1 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_1A open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0202-13": {
+      "description": "Cylinder 2 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_1B open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0203-13": {
+      "description": "Cylinder 3 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_2A open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0204-13": {
+      "description": "Cylinder 4 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_2B open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0205-13": {
+      "description": "Cylinder 5 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_3A open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0206-13": {
+      "description": "Cylinder 6 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_3B open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0207-13": {
+      "description": "Cylinder 7 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_4A open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0208-13": {
+      "description": "Cylinder 8 Injector Circuit/Open",
+      "possible_causes": "Circuit INJECTOR_4B open/high resistance; Injector disconnected",
+      "action": "Check circuit and injector."
+    },
+    "P0222-00": {
+      "description": "Throttle/Pedal Position Sensor Switch B Circuit Low",
+      "possible_causes": "Potentiometer 2 circuit open/short to ground; Harness/Throttle/ECM failure",
+      "action": "Check circuits. Replace throttle unit/ECM if failed."
+    },
+    "P0223-00": {
+      "description": "Throttle/Pedal Position Sensor Switch B Circuit High",
+      "possible_causes": "NOTE: Circuit THROTTLE_POSITION_SENSOR_2; Circuit open/short to power; Sensor failure",
+      "action": "Check circuits. Replace sensor."
+    },
+    "P0231-23": {
+      "description": "Fuel Pump Secondary Circuit Low - Signal stuck low",
+      "possible_causes": "Pump driver module signal circuit short/open; Module not energized",
+      "action": "Check related DTCs (P0232-24). Check circuit and module power. Replace module."
+    },
+    "P0232-24": {
+      "description": "Fuel Pump Secondary Circuit Low - Signal stuck high",
+      "possible_causes": "Pump driver module signal circuit short/open; Module not energized",
+      "action": "Check related DTCs (P0231-23). Check circuit and module power. Replace module."
+    },
+    "P0251-13": {
+      "description": "Injection Pump Fuel Metering Control A - Circuit open",
+      "possible_causes": "Fuel rail pressure sensor circuit open",
+      "action": "Check fuel rail pressure sensor circuit."
+    },
+    "P0253-11": {
+      "description": "Injection Pump Fuel Metering Control A Low - Circuit short to ground",
+      "possible_causes": "Fuel rail pressure sensor circuit short to ground",
+      "action": "Check fuel rail pressure sensor circuit."
+    },
+    "P0254-12": {
+      "description": "Injection Pump Fuel Metering Control A High - Circuit short to battery",
+      "possible_causes": "Fuel rail pressure sensor circuit short to power",
+      "action": "Check fuel rail pressure sensor circuit."
+    },
+    "P0256-13": {
+      "description": "Injection Pump Fuel Metering Control B - Circuit open",
+      "possible_causes": "Fuel rail pressure sensor circuit open",
+      "action": "Check fuel rail pressure sensor circuit."
+    },
+    "P0258-11": {
+      "description": "Injection Pump Fuel Metering Control B Low - Circuit short to ground",
+      "possible_causes": "Fuel rail pressure sensor circuit short to ground",
+      "action": "Check fuel rail pressure sensor circuit."
+    },
+    "P0259-12": {
+      "description": "Injection Pump Fuel Metering Control B High - Circuit short to battery",
+      "possible_causes": "Fuel rail pressure sensor circuit short to power",
+      "action": "Check fuel rail pressure sensor circuit."
+    },
+    "P025C-14": {
+      "description": "Fuel Pump Module Control Circuit Low - Circuit short to ground or open",
+      "possible_causes": "Fuel pump driver module control circuit short/open",
+      "action": "Check circuit."
+    },
+    "P025D-12": {
+      "description": "Fuel Pump Module Control Circuit High - Circuit short to battery",
+      "possible_causes": "Fuel pump driver module control circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0261-11": {
+      "description": "Cylinder 1 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 1 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0261-12": {
+      "description": "Cylinder 1 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 1 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0262-01": {
+      "description": "Cylinder 1 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 1 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0262-12": {
+      "description": "Cylinder 1 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 1 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0264-11": {
+      "description": "Cylinder 2 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 2 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0264-12": {
+      "description": "Cylinder 2 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 2 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0265-01": {
+      "description": "Cylinder 2 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 2 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0265-12": {
+      "description": "Cylinder 2 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 2 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0267-11": {
+      "description": "Cylinder 3 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 3 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0267-12": {
+      "description": "Cylinder 3 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 3 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0268-01": {
+      "description": "Cylinder 3 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 3 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0268-12": {
+      "description": "Cylinder 3 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 3 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0270-11": {
+      "description": "Cylinder 4 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 4 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0270-12": {
+      "description": "Cylinder 4 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 4 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0271-01": {
+      "description": "Cylinder 4 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 4 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0271-12": {
+      "description": "Cylinder 4 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 4 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0273-11": {
+      "description": "Cylinder 5 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 5 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0273-12": {
+      "description": "Cylinder 5 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 5 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0274-01": {
+      "description": "Cylinder 5 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 5 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0274-12": {
+      "description": "Cylinder 5 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 5 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0276-11": {
+      "description": "Cylinder 6 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 6 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0276-12": {
+      "description": "Cylinder 6 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 6 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0277-01": {
+      "description": "Cylinder 6 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 6 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0277-12": {
+      "description": "Cylinder 6 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 6 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0279-11": {
+      "description": "Cylinder 7 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 7 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0279-12": {
+      "description": "Cylinder 7 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 7 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0280-01": {
+      "description": "Cylinder 7 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 7 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0280-12": {
+      "description": "Cylinder 7 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 7 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0282-11": {
+      "description": "Cylinder 8 Injector Circuit Low - Circuit short to ground",
+      "possible_causes": "Injector 8 circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0282-12": {
+      "description": "Cylinder 8 Injector Circuit Low - Circuit short to battery",
+      "possible_causes": "Injector 8 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0283-01": {
+      "description": "Cylinder 8 Injector Circuit High - General electrical failure",
+      "possible_causes": "Injector 8 circuit short to ground/power",
+      "action": "Check circuit."
+    },
+    "P0283-12": {
+      "description": "Cylinder 8 Injector Circuit High - Circuit short to battery",
+      "possible_causes": "Injector 8 circuit short to power",
+      "action": "Check circuit."
+    },
+    "P02EE-01": {
+      "description": "Cylinder 1 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 1 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02EE-1C": {
+      "description": "Cylinder 1 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P02EF-01": {
+      "description": "Cylinder 2 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 2 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02EF-1C": {
+      "description": "Cylinder 2 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P02F0-01": {
+      "description": "Cylinder 3 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 3 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02F0-1C": {
+      "description": "Cylinder 3 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P02F1-01": {
+      "description": "Cylinder 4 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 4 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02F1-1C": {
+      "description": "Cylinder 4 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P02F2-01": {
+      "description": "Cylinder 5 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 5 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02F2-1C": {
+      "description": "Cylinder 5 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P02F3-01": {
+      "description": "Cylinder 6 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 6 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02F3-1C": {
+      "description": "Cylinder 6 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P02F4-01": {
+      "description": "Cylinder 7 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 7 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02F4-1C": {
+      "description": "Cylinder 7 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P02F5-01": {
+      "description": "Cylinder 8 Injector Circuit Range/Performance - General electrical failure",
+      "possible_causes": "Injector 8 circuit short to power/short together; Injector failure",
+      "action": "Check circuits. Replace injector."
+    },
+    "P02F5-1C": {
+      "description": "Cylinder 8 Injector Circuit Range/Performance - Circuit voltage out of range",
+      "possible_causes": "ECM failure",
+      "action": "Check for related DTCs. Replace ECM."
+    },
+    "P0300-00": {
+      "description": "Random Misfire Detected",
+      "possible_causes": "Poor fuel supply/quality; Air leak; Catalyst/exhaust blockage; Spark plug/coil failure; Low compression; Reluctor ring/sensor failure; Injector failure",
+      "action": "Check DTCs. Check fuel/air/exhaust/ignition systems. Check compression. Inspect sensors/connectors."
+    },
+    "P0301-00": {
+      "description": "Cylinder 1 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 1",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0302-00": {
+      "description": "Cylinder 2 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 2",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0303-00": {
+      "description": "Cylinder 3 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 3",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0304-00": {
+      "description": "Cylinder 4 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 4",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0305-00": {
+      "description": "Cylinder 5 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 5",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0306-00": {
+      "description": "Cylinder 6 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 6",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0307-00": {
+      "description": "Cylinder 7 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 7",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0308-00": {
+      "description": "Cylinder 8 Misfire Detected",
+      "possible_causes": "Same as P0300 but specific to Cyl 8",
+      "action": "Same actions as P0300. Identify misfiring cylinder. Swap coils/plugs."
+    },
+    "P0313-00": {
+      "description": "Misfire Detected With Low Fuel",
+      "possible_causes": "Poor fuel quality; Blockage; Ignition/Injector/Air faults",
+      "action": "Check fuel level and quality. Check for related DTCs."
+    },
+    "P0316-00": {
+      "description": "Misfire Detected On Startup (First 1000 Revolutions)",
+      "possible_causes": "Poor fuel quality; Blockage; Ignition/Injector/Air faults",
+      "action": "Check fuel/air/ignition. Check for related DTCs."
+    },
+    "P0327-00": {
+      "description": "Knock Sensor 1 Circuit Low (Bank 1)",
+      "possible_causes": "Circuit short to ground/open; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P0328-00": {
+      "description": "Knock Sensor 1 Circuit High (Bank 1)",
+      "possible_causes": "Circuit short to power/high resistance; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P032C-00": {
+      "description": "Knock Sensor 3 Circuit Low (Bank 1)",
+      "possible_causes": "Circuit short to ground; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P032D-00": {
+      "description": "Knock Sensor 3 Circuit High (Bank 1)",
+      "possible_causes": "Circuit short to power/high resistance; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P0332-00": {
+      "description": "Knock Sensor 2 Circuit Low (Bank 2)",
+      "possible_causes": "Circuit short to ground/open; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P0333-00": {
+      "description": "Knock Sensor 2 Circuit High (Bank 2)",
+      "possible_causes": "Circuit short to power; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P0335-02": {
+      "description": "Crankshaft Position Sensor A Circuit - General signal failure",
+      "possible_causes": "Circuit short/open/high resistance; Disconnected; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0335-31": {
+      "description": "Crankshaft Position Sensor A Circuit - No signal",
+      "possible_causes": "Circuit short/open/high resistance; Disconnected; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P0336-00": {
+      "description": "Crankshaft Position Sensor A Circuit Range/Performance",
+      "possible_causes": "Circuit fault; Damage/gap incorrect; Sensor failure",
+      "action": "Check circuit. Check sensor/gap. Replace sensor."
+    },
+    "P033C-00": {
+      "description": "Knock Sensor 4 Circuit Low (Bank 2)",
+      "possible_causes": "Circuit short to ground; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P033D-00": {
+      "description": "Knock Sensor 4 Circuit High (Bank 2)",
+      "possible_causes": "Circuit short to power/high resistance; Poor contact; Sensor failure",
+      "action": "Check contact. Check circuit. Replace sensor."
+    },
+    "P0340-02": {
+      "description": "Camshaft Position Sensor A Circuit (Bank 1) - General signal failure",
+      "possible_causes": "Circuit short/open/high resistance; Sensor failure/installation",
+      "action": "Check circuit. Check sensor. Replace sensor."
+    },
+    "P0340-31": {
+      "description": "Camshaft Position Sensor A Circuit (Bank 1) - No signal",
+      "possible_causes": "Circuit short/open/high resistance; Sensor failure/installation",
+      "action": "Check circuit. Check sensor. Replace sensor."
+    },
+    "P0341-00": {
+      "description": "Camshaft Position Sensor A Circuit Range/Performance (Bank 1)",
+      "possible_causes": "Circuit fault; Gap/rotor damage; Sensor failure",
+      "action": "Check circuit. Check sensor/rotor. Replace sensor."
+    },
+    "P0345-02": {
+      "description": "Camshaft Position Sensor A Circuit (Bank 2) - General signal failure",
+      "possible_causes": "Circuit short/open/high resistance; Sensor failure/installation",
+      "action": "Check circuit. Check sensor. Replace sensor."
+    },
+    "P0345-31": {
+      "description": "Camshaft Position Sensor A Circuit (Bank 2) - No signal",
+      "possible_causes": "Circuit short/open/high resistance; Sensor failure/installation",
+      "action": "Check circuit. Check sensor. Replace sensor."
+    },
+    "P0346-00": {
+      "description": "Camshaft Position Sensor A Circuit Range/Performance (Bank 2)",
+      "possible_causes": "Circuit fault; Gap/rotor damage; Sensor failure",
+      "action": "Check circuit. Check sensor/rotor. Replace sensor."
+    },
+    "P0351-13": {
+      "description": "Ignition Coil A Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 1 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0352-13": {
+      "description": "Ignition Coil B Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 2 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0353-13": {
+      "description": "Ignition Coil C Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 3 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0354-13": {
+      "description": "Ignition Coil D Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 4 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0355-13": {
+      "description": "Ignition Coil E Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 5 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0356-13": {
+      "description": "Ignition Coil F Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 6 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0357-13": {
+      "description": "Ignition Coil G Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 7 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0358-13": {
+      "description": "Ignition Coil H Primary/Secondary Circuit - Open",
+      "possible_causes": "Coil 8 open/disconnected/high resistance",
+      "action": "Check circuit and coil."
+    },
+    "P0365-02": {
+      "description": "Camshaft Position Sensor B Circuit (Bank 1) - General signal failure",
+      "possible_causes": "Circuit short/open/high resistance; Sensor failure/installation",
+      "action": "Check circuit. Check sensor. Replace sensor."
+    },
+    "P0366-00": {
+      "description": "Camshaft Position Sensor B Circuit Range/Performance (Bank 1)",
+      "possible_causes": "Circuit fault; Gap/rotor damage; Sensor failure",
+      "action": "Check circuit. Check sensor/rotor. Replace sensor."
+    },
+    "P0390-02": {
+      "description": "Camshaft Position Sensor B Circuit (Bank 2) - General signal failure",
+      "possible_causes": "Circuit short/open/high resistance; Sensor failure/installation",
+      "action": "Check circuit. Check sensor. Replace sensor."
+    },
+    "P0391-00": {
+      "description": "Camshaft Position Sensor B Circuit Range/Performance (Bank 2)",
+      "possible_causes": "Circuit fault; Gap/rotor damage; Sensor failure",
+      "action": "Check circuit. Check sensor/rotor. Replace sensor."
+    },
+    "P0420-00": {
+      "description": "Catalyst System Efficiency Below Threshold (Bank 1)",
+      "possible_causes": "Converter failure (overheating/misfire/poisoning)",
+      "action": "Check misfire DTCs. Check oil/fuel. Replace converter."
+    },
+    "P0430-00": {
+      "description": "Catalyst System Efficiency Below Threshold (Bank 2)",
+      "possible_causes": "Converter failure (overheating/misfire/poisoning)",
+      "action": "Check misfire DTCs. Check oil/fuel. Replace converter."
+    },
+    "P0441-00": {
+      "description": "Evaporative Emission System Incorrect Purge Flow",
+      "possible_causes": "NOTE: Circuit PURGE_VALVE; Hose/pipe failure; Valve circuit fault; Valve failure",
+      "action": "Check hoses. Check circuit. Replace valve."
+    },
+    "P0442-00": {
+      "description": "Evaporative Emission System Leak Detected (small leak)",
+      "possible_causes": "EVAP leak",
+      "action": "Check for leaks. Note: Purge valve DTCs must be fixed first."
+    },
+    "P0444-13": {
+      "description": "Evaporative Emission System Purge Control Valve A Circuit Open",
+      "possible_causes": "NOTE: Circuit COV / CHANGE_OVER_VALVE; Circuit open",
+      "action": "Check for leaks. Check circuit."
+    },
+    "P0447-00": {
+      "description": "Evaporative Emission System Vent Control Circuit Open",
+      "possible_causes": "DMTL module circuit open/fuse blown/failure",
+      "action": "Check circuit/fuse. Replace module."
+    },
+    "P0448-00": {
+      "description": "Evaporative Emission System Vent Control Circuit Shorted",
+      "possible_causes": "DMTL module circuit short; Module failure",
+      "action": "Check circuit. Replace module."
+    },
+    "P0456-00": {
+      "description": "Evaporative Emission System Leak Detected (very small leak)",
+      "possible_causes": "EVAP leak",
+      "action": "Check for leaks."
+    },
+    "P0458-11": {
+      "description": "Evaporative Emission System Purge Control Valve Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0459-12": {
+      "description": "Evaporative Emission System Purge Control Valve Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0461-29": {
+      "description": "Fuel Level Sensor A Circuit Range/Performance - Signal invalid",
+      "possible_causes": "Circuit open/short; Sensor stuck; Sensor failure",
+      "action": "Check circuit. Check sensor. Replace sensor."
+    },
+    "P0461-2F": {
+      "description": "Fuel Level Sensor A Circuit Range/Performance - Signal erratic",
+      "possible_causes": "Circuit short/open; Sensor track damaged",
+      "action": "Check circuit. Check sensor track. Replace sensor."
+    },
+    "P0481-04": {
+      "description": "Fan 2 Control Circuit - System internal failures",
+      "possible_causes": "Damaged cooling fan control unit",
+      "action": "Check datalogger 0x03F9. Replace fan control unit."
+    },
+    "P0481-09": {
+      "description": "Fan 2 Control Circuit - Component failures",
+      "possible_causes": "Damaged cooling fan control unit",
+      "action": "Check datalogger 0x03F9. Replace fan control unit."
+    },
+    "P0481-11": {
+      "description": "Fan 2 Control Circuit - Circuit short to ground",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check circuit."
+    },
+    "P0481-12": {
+      "description": "Fan 2 Control Circuit - Circuit short to battery",
+      "possible_causes": "Circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0481-13": {
+      "description": "Fan 2 Control Circuit - Circuit open",
+      "possible_causes": "Circuit open",
+      "action": "Check circuit."
+    },
+    "P0481-16": {
+      "description": "Fan 2 Control Circuit - Circuit voltage below threshold",
+      "possible_causes": "Charging system fault; Battery discharged",
+      "action": "Check charging circuit. Replace generator/battery."
+    },
+    "P0481-17": {
+      "description": "Fan 2 Control Circuit - Circuit voltage above threshold",
+      "possible_causes": "Charging system fault",
+      "action": "Check charging circuit. Replace generator."
+    },
+    "P0481-38": {
+      "description": "Fan 2 Control Circuit - Signal frequency incorrect",
+      "possible_causes": "Damaged cooling fan control unit",
+      "action": "Replace fan control unit."
+    },
+    "P0481-48": {
+      "description": "Fan 2 Control Circuit - Over temperature",
+      "possible_causes": "Damaged cooling fan control unit",
+      "action": "Replace fan control unit."
+    },
+    "P0481-93": {
+      "description": "Fan 2 Control Circuit - No operation",
+      "possible_causes": "Blocked fan rotor; Control unit failure",
+      "action": "Check for obstruction. Replace control unit."
+    },
+    "P0481-96": {
+      "description": "Fan 2 Control Circuit - Component internal failure",
+      "possible_causes": "Damaged cooling fan control unit",
+      "action": "Replace fan control unit."
+    },
+    "P0481-97": {
+      "description": "Fan 2 Control Circuit - Operation obstructed",
+      "possible_causes": "Blocked fan; Control unit failure",
+      "action": "Check for obstruction. Replace control unit."
+    },
+    "P0500-81": {
+      "description": "Vehicle Speed Sensor A - Invalid serial data received",
+      "possible_causes": "Wheel speed sensor fault",
+      "action": "Check ABS module for DTCs."
+    },
+    "P0500-82": {
+      "description": "Vehicle Speed Sensor A - Alive/sequence counter incorrect",
+      "possible_causes": "ABS module not on bus",
+      "action": "Check ABS module and circuit."
+    },
+    "P0500-83": {
+      "description": "Vehicle Speed Sensor A - Value of signal protection calculation incorrect",
+      "possible_causes": "Incorrect ABS/ECM software",
+      "action": "Update software."
+    },
+    "P0500-85": {
+      "description": "Vehicle Speed Sensor A - Signal above allowable range",
+      "possible_causes": "Speed > 300 km/h",
+      "action": "Check ABS module."
+    },
+    "P0501-62": {
+      "description": "Vehicle Speed Sensor A Range/Performance",
+      "possible_causes": "Signal mismatch; Tire size",
+      "action": "Check related DTCs. Check tire size."
+    },
+    "P0504-00": {
+      "description": "Brake Switch A/B Correlation",
+      "possible_causes": "Brake switch circuit fault; Brake switch failure",
+      "action": "Check brake fluid. Check ABS module. Check switch circuit. Replace switch."
+    },
+    "P0504-64": {
+      "description": "Brake Switch A/B Correlation - Signal plausibility failure",
+      "possible_causes": "Circuit fault; Switch adjustment",
+      "action": "Check brake fluid. Check switch adjustment/circuit. Replace switch."
+    },
+    "P0506-00": {
+      "description": "Idle Air Control System RPM Lower Than Expected",
+      "possible_causes": "Intake restriction; Drive overload",
+      "action": "Check intake. Check accessory drive."
+    },
+    "P0506-24": {
+      "description": "Idle Air Control System RPM Lower Than Expected - Signal stuck high",
+      "possible_causes": "Intake restriction/leak; Breather leak; Drive overload",
+      "action": "Check intake/breather. Check accessory drive."
+    },
+    "P0507-00": {
+      "description": "Idle Air Control System RPM Higher Than Expected",
+      "possible_causes": "Intake/breather leak",
+      "action": "Check intake/breather."
+    },
+    "P0507-23": {
+      "description": "Idle Air Control System RPM Higher Than Expected - Signal stuck low",
+      "possible_causes": "Intake restriction/leak",
+      "action": "Check intake."
+    },
+    "P0508-23": {
+      "description": "Cold Start Ignition Timing Performance - Signal stuck low",
+      "possible_causes": "Coil fault/noise; ECM failure",
+      "action": "Check coil circuits. Replace coils/ECM."
+    },
+    "P050B-24": {
+      "description": "Cold Start Ignition Timing Performance - Signal stuck high",
+      "possible_causes": "Coil fault/noise; ECM failure",
+      "action": "Check coil circuits. Replace coils/ECM."
+    },
+    "P050E-00": {
+      "description": "Cold Start Engine Exhaust Temperature Too Low",
+      "possible_causes": "Incorrect/faulty coolant sensor",
+      "action": "Check sensor. Replace sensor."
+    },
+    "P0512-12": {
+      "description": "Starter Request Circuit - Circuit short to battery",
+      "possible_causes": "Circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0512-14": {
+      "description": "Starter Request Circuit - Circuit short to ground or open",
+      "possible_causes": "Circuit short to ground/open",
+      "action": "Check circuit."
+    },
+    "P0513-00": {
+      "description": "Incorrect Immobilizer Key",
+      "possible_causes": "Key invalid; CAN corruption; Low battery",
+      "action": "Check CAN network. Check battery."
+    },
+    "P052A-00": {
+      "description": "Cold Start Intake (A) Camshaft Position Timing Over Advanced (Bank 1)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P052B-00": {
+      "description": "Cold Start Intake (A) Camshaft Position Timing Over Retarded (Bank 1)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P052C-00": {
+      "description": "Cold Start Intake (A) Camshaft Position Timing Over Advanced (Bank 2)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P052D-00": {
+      "description": "Cold Start Intake (A) Camshaft Position Timing Over Retarded (Bank 2)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P054A-00": {
+      "description": "Cold Start Exhaust (B) Camshaft Position Timing Over Advanced (Bank 1)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P054B-00": {
+      "description": "Cold Start Exhaust (B) Camshaft Position Timing Over Retarded (Bank 1)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P054C-00": {
+      "description": "Cold Start Exhaust (B) Camshaft Position Timing Over Advanced (Bank 2)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P054D-00": {
+      "description": "Cold Start Exhaust (B) Camshaft Position Timing Over Retarded (Bank 2)",
+      "possible_causes": "Low oil pressure; Solenoid circuit/failure; Chain stretch",
+      "action": "Check oil level. Check solenoid circuit. Check chain."
+    },
+    "P0560-13": {
+      "description": "System Voltage Circuit open",
+      "possible_causes": "ECM power supply open",
+      "action": "Check ECM power circuit."
+    },
+    "P0562-00": {
+      "description": "System Voltage Low",
+      "possible_causes": "Battery/Generator circuit fault; Generator failure",
+      "action": "Check circuits. Check generator."
+    },
+    "P0563-00": {
+      "description": "System Voltage High",
+      "possible_causes": "Battery circuit; Generator overcharging",
+      "action": "Check circuits. Check generator."
+    },
+    "P0572-17": {
+      "description": "Brake Switch A Circuit Low - Voltage above threshold",
+      "possible_causes": "Brake switch 2 short to ground; Switch adjustment; Driver error",
+      "action": "Check circuit. Check switch adjustment. Replace switch."
+    },
+    "P0573-16": {
+      "description": "Brake Switch A Circuit High - Voltage below threshold",
+      "possible_causes": "Circuit open; Switch adjustment",
+      "action": "Check circuit. Check switch adjustment. Replace switch."
+    },
+    "P0578-00": {
+      "description": "Cruise Control Multi-Function Input A Circuit Stuck",
+      "possible_causes": "Switch stuck",
+      "action": "Check switch circuit. Replace switch pack."
+    },
+    "P0578-87": {
+      "description": "Brake Pedal Position Sensor Circuit Range/Performance - Missing message",
+      "possible_causes": "Brake pressure signal missing from ABS",
+      "action": "Check ABS module for DTCs."
+    },
+    "P0590-00": {
+      "description": "Cruise Control Multi-Function Input B Circuit Stuck",
+      "possible_causes": "Active speed limiter switch stuck",
+      "action": "Check gear shift module."
+    },
+    "P0600-49": {
+      "description": "Serial Communication Link - Internal electronic failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0601-43": {
+      "description": "Internal Control Module Memory Check Sum Error - Special memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0601-45": {
+      "description": "Internal Control Module Memory Check Sum Error - Program memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0604-42": {
+      "description": "Internal Control Module RAM Error - General memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0604-43": {
+      "description": "Internal Control Module RAM Error - Special memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0604-44": {
+      "description": "Internal Control Module RAM Error - Data memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0605-00": {
+      "description": "Internal Control Module ROM Error",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0605-29": {
+      "description": "Internal Control Module ROM Error - Signal invalid",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0605-42": {
+      "description": "Internal Control Module ROM Error - General memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0605-44": {
+      "description": "Internal Control Module ROM Error - Data memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0605-46": {
+      "description": "Internal Control Module ROM Error - Calibration memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0605-48": {
+      "description": "Internal Control Module ROM Error - Supervision software failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0605-64": {
+      "description": "Internal Control Module ROM Error - Signal plausibility failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-01": {
+      "description": "Control Module Processor - General electrical failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-04": {
+      "description": "Control Module Processor - System internal failures",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-05": {
+      "description": "Control Module Processor - System programming failures",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-41": {
+      "description": "Control Module Processor - General checksum failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-42": {
+      "description": "Control Module Processor - General memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-43": {
+      "description": "Control Module Processor - Special memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-44": {
+      "description": "Control Module Processor - Data memory failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-47": {
+      "description": "Control Module Processor - Watchdog failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-48": {
+      "description": "Control Module Processor - Supervision software failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0606-49": {
+      "description": "Control Module Processor - Internal electronic failure",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0607-00": {
+      "description": "Control Module Performance",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power supply/water ingress. Replace ECM."
+    },
+    "P0610-43": {
+      "description": "Control Module Vehicle Options Error",
+      "possible_causes": "Corrupt software (ECM/CJB/RJB)",
+      "action": "Update software. Re-configure modules."
+    },
+    "P0615-13": {
+      "description": "Starter Relay Circuit Open",
+      "possible_causes": "NOTE: Circuit STARTER_RELAY_NEG; Circuit open; Relay failure",
+      "action": "Check circuit. Replace relay."
+    },
+    "P0616-11": {
+      "description": "Starter Relay Circuit Low - Circuit short to ground",
+      "possible_causes": "NOTE: Circuit STARTER_RELAY_NEG; Circuit short to ground; Relay failure",
+      "action": "Check circuit. Replace relay."
+    },
+    "P0617-12": {
+      "description": "Starter Relay Circuit High - Circuit short to battery",
+      "possible_causes": "NOTE: Circuit STARTER_RELAY_NEG; Circuit short to power; Relay failure",
+      "action": "Check circuit. Replace relay."
+    },
+    "P061A-00": {
+      "description": "Internal Control Module Torque Performance",
+      "possible_causes": "MAF/Throttle/ECM failure",
+      "action": "Check sensors/throttle. Replace ECM."
+    },
+    "P061A-04": {
+      "description": "Internal Control Module Torque Performance - System internal failures",
+      "possible_causes": "MAF/Throttle/ECM failure",
+      "action": "Check sensors/throttle. Replace ECM."
+    },
+    "P061A-29": {
+      "description": "Internal Control Module Torque Performance - Signal Invalid",
+      "possible_causes": "Intake leak; MAF/Throttle/Sensor failure",
+      "action": "Check for leaks. Check sensors."
+    },
+    "P061A-64": {
+      "description": "Internal Control Module Torque Performance - Signal plausibility failure",
+      "possible_causes": "Intake leak; MAF failure",
+      "action": "Check for leaks. Check sensors."
+    },
+    "P061B-62": {
+      "description": "Internal Control Module Torque Calculation Performance",
+      "possible_causes": "Intake/breather leak; Sensor/Throttle failure",
+      "action": "Check for leaks. Check sensors/throttle."
+    },
+    "P0620-01": {
+      "description": "Generator Control Circuit - General electrical failure",
+      "possible_causes": "NOTE: Circuit LIN_A; Connection/Circuit fault; Generator failure",
+      "action": "Check connections. Check circuit. Replace generator."
+    },
+    "P0627-00": {
+      "description": "Fuel Pump A Control Circuit/Open",
+      "possible_causes": "Pump not operating; Connector/circuit fault; Driver module failure",
+      "action": "Check pump. Check circuits. Replace driver module."
+    },
+    "P062A-00": {
+      "description": "Fuel Pump A Control Circuit Range/Performance",
+      "possible_causes": "Invalid duty requested",
+      "action": "Check driver module circuit."
+    },
+    "P0630-00": {
+      "description": "VIN Not Programmed or Incompatible ECM/PCM",
+      "possible_causes": "Configuration/software mismatch",
+      "action": "Update software. Re-configure modules."
+    },
+    "P0634-22": {
+      "description": "PCM/ECM/TCM Internal Temperature Too High",
+      "possible_causes": "Overheating",
+      "action": "Clear DTC. Check for obstructions. Replace ECM."
+    },
+    "P0634-48": {
+      "description": "PCM/ECM/TCM Internal Temperature A Too High",
+      "possible_causes": "Overheating",
+      "action": "Clear DTC. Check for obstructions. Replace ECM."
+    },
+    "P0642-00": {
+      "description": "Sensor Reference Voltage A Circuit Low",
+      "possible_causes": "NOTE: Circuit SENSOR_5V_SUPPLY; Circuit short to ground/open; Internal short",
+      "action": "Check 5V supply circuit. Check sensor DTCs."
+    },
+    "P0643-00": {
+      "description": "Sensor Reference Voltage A Circuit High",
+      "possible_causes": "NOTE: Circuit SENSOR_5V_SUPPLY; Circuit short to power",
+      "action": "Check 5V supply circuit. Check sensor DTCs."
+    },
+    "P0657-13": {
+      "description": "Actuator Supply Voltage A Circuit/Open",
+      "possible_causes": "IMTV circuit open",
+      "action": "Check intake manifold tuning solenoid circuit."
+    },
+    "P0658-11": {
+      "description": "Actuator Supply Voltage A Circuit Low",
+      "possible_causes": "IMTV circuit short to ground",
+      "action": "Check intake manifold tuning solenoid circuit."
+    },
+    "P0659-12": {
+      "description": "Actuator Supply Voltage A Circuit High",
+      "possible_causes": "IMTV circuit short to power",
+      "action": "Check intake manifold tuning solenoid circuit."
+    },
+    "P065B-16": {
+      "description": "Generator Control Circuit Range/Performance - Voltage below threshold",
+      "possible_causes": "NOTE: Circuit LIN_A; Connection/Circuit/Battery fault",
+      "action": "Check connections. Check circuit. Check battery. Replace generator."
+    },
+    "P065B-17": {
+      "description": "Generator Control Circuit Range/Performance - Voltage above threshold",
+      "possible_causes": "NOTE: Circuit LIN_A; Connection/Circuit/Battery fault",
+      "action": "Check connections. Check circuit. Check battery. Replace generator."
+    },
+    "P065C-00": {
+      "description": "Generator Mechanical Performance",
+      "possible_causes": "Belt/Pulley/Generator failure",
+      "action": "Check belt/pulley. Replace generator."
+    },
+    "P0660-13": {
+      "description": "Intake Manifold Tuning Valve Control Circuit Open",
+      "possible_causes": "IMTV circuit open",
+      "action": "Check intake manifold tuning valve circuit."
+    },
+    "P0661-11": {
+      "description": "Intake Manifold Tuning Valve Control Circuit Low",
+      "possible_causes": "IMTV circuit short to ground",
+      "action": "Check intake manifold tuning valve circuit."
+    },
+    "P0662-12": {
+      "description": "Intake Manifold Tuning Valve Control Circuit High",
+      "possible_causes": "IMTV circuit short to power",
+      "action": "Check intake manifold tuning valve circuit."
+    },
+    "P0668-00": {
+      "description": "PCM/ECM/TCM Internal Temperature Sensor A Circuit Low",
+      "possible_causes": "Sensor failure",
+      "action": "Replace ECM."
+    },
+    "P0669-00": {
+      "description": "PCM/ECM/TCM Internal Temperature Sensor A Circuit High",
+      "possible_causes": "Sensor failure",
+      "action": "Replace ECM."
+    },
+    "P0687-73": {
+      "description": "ECM/PCM Power Relay Control Circuit High",
+      "possible_causes": "NOTE: Circuit EMS_MAIN_RLY; Circuit short to power; Relay failure",
+      "action": "Check circuit. Replace relay."
+    },
+    "P0695-00": {
+      "description": "Fan 3 Control Circuit Low",
+      "possible_causes": "NOTE: Circuit E_BOX_FAN; Circuit short to ground; Fan failure",
+      "action": "Check circuit. Replace E-Box fan."
+    },
+    "P0696-12": {
+      "description": "Fan 3 Control Circuit High - Circuit short to battery",
+      "possible_causes": "NOTE: Circuit E_BOX_FAN; Circuit short to power; Fan failure",
+      "action": "Check circuit. Replace E-Box fan."
+    },
+    "P0696-13": {
+      "description": "Fan 3 Control Circuit High - Circuit open",
+      "possible_causes": "NOTE: Circuit E_BOX_FAN; Circuit open; Fan failure",
+      "action": "Check circuit. Replace E-Box fan."
+    },
+    "P0721-85": {
+      "description": "Output Shaft Speed Sensor Range/Performance",
+      "possible_causes": "TCM signal fault",
+      "action": "Check TCM DTCs."
+    },
+    "P0721-86": {
+      "description": "Output Shaft Speed Sensor Range/Performance",
+      "possible_causes": "TCM signal fault",
+      "action": "Check TCM DTCs."
+    },
+    "P0724-17": {
+      "description": "Brake Switch B Circuit High",
+      "possible_causes": "Switch 1 short to power; Adjustment; Switch failure",
+      "action": "Check circuit. Check adjustment. Replace switch."
+    },
+    "P0850-86": {
+      "description": "Park/Neutral Switch Input Circuit - Signal invalid",
+      "possible_causes": "NOTE: Circuit PN_SW; Circuit fault; CAN failure",
+      "action": "Check gear shift module DTCs. Check circuit/CAN."
+    },
+    "P0850-8F": {
+      "description": "Park/Neutral Switch Input Circuit - Erratic",
+      "possible_causes": "NOTE: Circuit PN_SW; Circuit fault; CAN failure",
+      "action": "Check gear shift module DTCs. Check circuit/CAN."
+    },
+    "P0851-14": {
+      "description": "Park/Neutral Switch Input Circuit Low",
+      "possible_causes": "Circuit short to ground/open",
+      "action": "Check circuit."
+    },
+    "P0852-12": {
+      "description": "Park/Neutral Switch Input Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check circuit."
+    },
+    "P0A1A-87": {
+      "description": "Generator Control Module - Missing message",
+      "possible_causes": "LIN circuit open; Generator failure",
+      "action": "Check connections. Check circuit."
+    },
+    "P0A1A-88": {
+      "description": "Generator Control Module - Bus off",
+      "possible_causes": "LIN circuit open; Generator failure",
+      "action": "Check connections. Check circuit."
+    },
+    "P0A3B-00": {
+      "description": "Generator Over Temperature",
+      "possible_causes": "Cooling fan/coolant fault",
+      "action": "Check fan/coolant."
+    },
+    "P0A3B-68": {
+      "description": "Generator Over Temperature - Event information",
+      "possible_causes": "Cooling fan/coolant fault",
+      "action": "Check fan/coolant."
+    },
+    "P1150-00": {
+      "description": "Mass Air Flow Circuit Offset",
+      "possible_causes": "Air intake/breather leak; Blockage; Sensor failure",
+      "action": "Check intake/breather. Check sensor circuit. Replace sensor."
+    },
+    "P1315-00": {
+      "description": "Persistent Misfire",
+      "possible_causes": "Coil/Injector/Spark plug failure; Compression/Exhaust fault",
+      "action": "Check for misfire DTCs. Check all ignition/fuel components."
+    },
+    "P1316-00": {
+      "description": "Injector Driver Module Codes Detected",
+      "possible_causes": "Coil/Injector/Spark plug failure; Compression/Exhaust fault",
+      "action": "Check for misfire DTCs. Check all ignition/fuel components."
+    },
+    "P1593-64": {
+      "description": "Cruise Control Monitor Fault",
+      "possible_causes": "Speed control monitor fault",
+      "action": "Update car configuration file."
+    },
+    "P1603-00": {
+      "description": "EEPROM Malfunction",
+      "possible_causes": "Corrupt software; Power supply fault; Water ingress",
+      "action": "Update software. Check power/water ingress. Replace ECM."
+    },
+    "P2088-11": {
+      "description": "A Camshaft Position Actuator Control Circuit Low Bank 1",
+      "possible_causes": "Solenoid short to ground",
+      "action": "Check intake valve solenoid 1."
+    },
+    "P2089-12": {
+      "description": "A Camshaft Position Actuator Control Circuit High Bank 1",
+      "possible_causes": "Solenoid short to power",
+      "action": "Check intake valve solenoid 1."
+    },
+    "P2090-11": {
+      "description": "B Camshaft Position Actuator Control Circuit Low Bank 1",
+      "possible_causes": "Solenoid short to ground",
+      "action": "Check exhaust valve solenoid 1."
+    },
+    "P2091-12": {
+      "description": "B Camshaft Position Actuator Control Circuit High Bank 1",
+      "possible_causes": "Solenoid short to power",
+      "action": "Check exhaust valve solenoid 1."
+    },
+    "P2092-11": {
+      "description": "A Camshaft Position Actuator Control Circuit Low Bank 2",
+      "possible_causes": "Solenoid short to ground",
+      "action": "Check intake valve solenoid 2."
+    },
+    "P2093-12": {
+      "description": "A Camshaft Position Actuator Control Circuit High Bank 2",
+      "possible_causes": "Solenoid short to power",
+      "action": "Check intake valve solenoid 2."
+    },
+    "P2094-11": {
+      "description": "B Camshaft Position Actuator Control Circuit Low Bank 2",
+      "possible_causes": "Solenoid short to ground",
+      "action": "Check exhaust valve solenoid 2."
+    },
+    "P2095-12": {
+      "description": "B Camshaft Position Actuator Control Circuit High Bank 2",
+      "possible_causes": "Solenoid short to power",
+      "action": "Check exhaust valve solenoid 2."
+    },
+    "P2096-00": {
+      "description": "Post Catalyst Fuel Trim System Too Lean Bank 1",
+      "possible_causes": "Circuit fault; Air leak; Sensor failure",
+      "action": "Check O2 sensor circuit. Check for leaks. Replace sensor."
+    },
+    "P2097-00": {
+      "description": "Post Catalyst Fuel Trim System Too Rich Bank 1",
+      "possible_causes": "Circuit fault; Air leak; Sensor failure",
+      "action": "Check O2 sensor circuit. Check for leaks. Replace sensor."
+    },
+    "P2098-00": {
+      "description": "Post Catalyst Fuel Trim System Too Lean Bank 2",
+      "possible_causes": "Circuit fault; Air leak; Sensor failure",
+      "action": "Check O2 sensor circuit. Check for leaks. Replace sensor."
+    },
+    "P2099-00": {
+      "description": "Post Catalyst Fuel Trim System Too Rich Bank 2",
+      "possible_causes": "Circuit fault; Air leak; Sensor failure",
+      "action": "Check O2 sensor circuit. Check for leaks. Replace sensor."
+    },
+    "P2105-00": {
+      "description": "Throttle Actuator Control System Forced Engine Shutdown",
+      "possible_causes": "Engine speed/torque limitation activated",
+      "action": "Check for related DTCs."
+    },
+    "P2118-19": {
+      "description": "Throttle Actuator Control Motor Current Range/Performance",
+      "possible_causes": "NOTE: Circuit THROTTLE_MOTOR_NEG/POS; Circuit short/high resistance; Ground fault; Throttle failure",
+      "action": "Check circuits. Check ground. Replace throttle unit."
+    },
+    "P2119-00": {
+      "description": "Throttle Actuator Control Throttle Body Range/Performance",
+      "possible_causes": "Carbon build-up; Throttle/Return spring failure",
+      "action": "Clean throttle. Check operation. Replace throttle unit."
+    },
+    "P2119-29": {
+      "description": "Throttle Actuator Control Throttle Body Range/Performance - Signal invalid",
+      "possible_causes": "Sticking throttle blade; Throttle failure",
+      "action": "Clean throttle. Check operation. Replace throttle unit."
+    },
+    "P2119-64": {
+      "description": "Throttle Actuator Control Throttle Body Range/Performance - Signal plausibility",
+      "possible_causes": "Sticking throttle blade; Throttle failure",
+      "action": "Clean throttle. Check operation. Replace throttle unit."
+    },
+    "P2122-00": {
+      "description": "Throttle/Pedal Position Sensor Switch D Circuit Low",
+      "possible_causes": "Pedal sensor 1 short to ground/open; VREF open",
+      "action": "Check pedal unit circuit. Replace pedal unit."
+    },
+    "P2123-00": {
+      "description": "Throttle/Pedal Position Sensor Switch D Circuit High",
+      "possible_causes": "Pedal sensor 1 short to power",
+      "action": "Check pedal unit circuit. Replace pedal unit."
+    },
+    "P2127-00": {
+      "description": "Throttle/Pedal Position Sensor Switch E Circuit Low",
+      "possible_causes": "Pedal sensor 2 short to ground/open; VREF open",
+      "action": "Check pedal unit circuit. Replace pedal unit."
+    },
+    "P2128-00": {
+      "description": "Throttle/Pedal Position Sensor Switch E Circuit High",
+      "possible_causes": "Pedal sensor 2 short to power",
+      "action": "Check pedal unit circuit. Replace pedal unit."
+    },
+    "P2135-00": {
+      "description": "Throttle/Pedal Position Sensor Switch A/B Voltage Correlation",
+      "possible_causes": "Circuit short/high resistance; Throttle/ECM failure",
+      "action": "Check circuits. Replace throttle unit/ECM."
+    },
+    "P2135-09": {
+      "description": "Throttle/Pedal Position Sensor Switch A/B Voltage Correlation - Component Failures",
+      "possible_causes": "Circuit short/open",
+      "action": "Check circuits."
+    },
+    "P2138-64": {
+      "description": "Throttle/Pedal Position Sensor Switch D/E Voltage Correlation",
+      "possible_causes": "Pedal sensor 1 & 2 short/open",
+      "action": "Check pedal unit circuits."
+    },
+    "P2183-23": {
+      "description": "Engine Coolant Temperature Sensor 2 Circuit Range/Performance - Signal stuck low",
+      "possible_causes": "Circuit high resistance/open; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P2183-24": {
+      "description": "Engine Coolant Temperature Sensor 2 Circuit Range/Performance - Signal stuck high",
+      "possible_causes": "Circuit short to power; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P2183-29": {
+      "description": "Engine Coolant Temperature Sensor 2 Circuit Range/Performance - Signal invalid",
+      "possible_causes": "Circuit fault; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P2184-16": {
+      "description": "Engine Coolant Temperature Sensor 2 Circuit Low",
+      "possible_causes": "Circuit short to ground/open/high resistance; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P2185-17": {
+      "description": "Engine Coolant Temperature Sensor 2 Circuit High",
+      "possible_causes": "Circuit short to power; Sensor failure",
+      "action": "Check circuit. Replace sensor."
+    },
+    "P219A-00": {
+      "description": "Bank 1 Air-Fuel Ratio Imbalance",
+      "possible_causes": "Air leaks (exhaust/intake/injector/plug); Low fuel pressure; Sensor failure",
+      "action": "Check for leaks/pressure. Check compression. Replace sensor."
+    },
+    "P219B-00": {
+      "description": "Bank 2 Air-Fuel Ratio Imbalance",
+      "possible_causes": "Air leaks (exhaust/intake/injector/plug); Low fuel pressure; Sensor failure",
+      "action": "Check for leaks/pressure. Check compression. Replace sensor."
+    },
+    "P2228-00": {
+      "description": "Barometric Pressure Circuit Low",
+      "possible_causes": "Sensor failure (internal ECM)",
+      "action": "Replace ECM."
+    },
+    "P2229-00": {
+      "description": "Barometric Pressure Circuit High",
+      "possible_causes": "Sensor failure (internal ECM)",
+      "action": "Replace ECM."
+    },
+    "P2279-00": {
+      "description": "Intake Air System Leak",
+      "possible_causes": "Breather/vacuum pipe disconnected; Intake leak",
+      "action": "Check for leaks."
+    },
+    "P2300-11": {
+      "description": "Ignition Coil A Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 1 circuit."
+    },
+    "P2301-12": {
+      "description": "Ignition Coil A Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 1 circuit."
+    },
+    "P2303-11": {
+      "description": "Ignition Coil B Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 2 circuit."
+    },
+    "P2304-12": {
+      "description": "Ignition Coil B Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 2 circuit."
+    },
+    "P2306-11": {
+      "description": "Ignition Coil C Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 3 circuit."
+    },
+    "P2307-12": {
+      "description": "Ignition Coil C Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 3 circuit."
+    },
+    "P2309-11": {
+      "description": "Ignition Coil D Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 4 circuit."
+    },
+    "P2310-12": {
+      "description": "Ignition Coil D Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 4 circuit."
+    },
+    "P2312-11": {
+      "description": "Ignition Coil E Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 5 circuit."
+    },
+    "P2313-12": {
+      "description": "Ignition Coil E Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 5 circuit."
+    },
+    "P2315-11": {
+      "description": "Ignition Coil F Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 6 circuit."
+    },
+    "P2316-12": {
+      "description": "Ignition Coil F Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 6 circuit."
+    },
+    "P2318-11": {
+      "description": "Ignition Coil G Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 7 circuit."
+    },
+    "P2319-12": {
+      "description": "Ignition Coil G Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 7 circuit."
+    },
+    "P2321-11": {
+      "description": "Ignition Coil H Primary Control Circuit Low",
+      "possible_causes": "Circuit short to ground",
+      "action": "Check coil 8 circuit."
+    },
+    "P2322-12": {
+      "description": "Ignition Coil H Primary Control Circuit High",
+      "possible_causes": "Circuit short to power",
+      "action": "Check coil 8 circuit."
+    },
+    "P2401-00": {
+      "description": "Evaporative Emission System Leak Detection Pump Control Circuit Low",
+      "possible_causes": "DMTL pump circuit short to ground",
+      "action": "Check DMTL pump circuit."
+    },
+    "P2402-00": {
+      "description": "Evaporative Emission System Leak Detection Pump Control Circuit High",
+      "possible_causes": "DMTL pump circuit short to power",
+      "action": "Check DMTL pump circuit."
+    },
+    "P2404-29": {
+      "description": "Evaporative Emission System Leak Detection Pump Sense Circuit Range/Performance",
+      "possible_causes": "DMTL module failure; Changeover valve fault",
+      "action": "Replace DMTL module."
+    },
+    "P2404-2F": {
+      "description": "Evaporative Emission System Leak Detection Pump Sense Circuit Range/Performance",
+      "possible_causes": "DMTL module failure; Changeover valve fault",
+      "action": "Replace DMTL module."
+    },
+    "P2405-00": {
+      "description": "Evaporative Emission System Leak Detection Pump Sense Circuit Low",
+      "possible_causes": "DMTL module failure",
+      "action": "Replace DMTL module."
+    },
+    "P2406-00": {
+      "description": "Evaporative Emission System Leak Detection Pump Sense Circuit High",
+      "possible_causes": "DMTL module failure",
+      "action": "Replace DMTL module."
+    },
+    "P240A-00": {
+      "description": "Evaporative Emission System Leak Detection Pump Heater Circuit/Open",
+      "possible_causes": "Heater circuit open/high resistance",
+      "action": "Check heater circuit."
+    },
+    "P240B-00": {
+      "description": "Evaporative Emission System Leak Detection Pump Heater Circuit Low",
+      "possible_causes": "Heater circuit short to ground",
+      "action": "Check heater circuit."
+    },
+    "P240C-00": {
+      "description": "Evaporative Emission System Leak Detection Pump Heater Circuit High",
+      "possible_causes": "Heater circuit short to power",
+      "action": "Check heater circuit."
+    },
+    "P2450-00": {
+      "description": "Evaporative Emission Control System Switching Valve Performance/Stuck Open",
+      "possible_causes": "DMTL failure",
+      "action": "Replace DMTL module."
+    },
+    "P2451-00": {
+      "description": "Evaporative Emission Control System Switching Valve Performance/Stuck Closed",
+      "possible_causes": "DMTL failure",
+      "action": "Replace DMTL module."
+    },
+    "P250C-23": {
+      "description": "Engine Oil Level Sensor Circuit Low",
+      "possible_causes": "NOTE: Circuit OIL_QUALITY_SENSOR; Circuit short to ground; Sensor failure",
+      "action": "Check datalogger 0x03F3. Check circuit. Replace sensor."
+    },
+    "P250D-24": {
+      "description": "Engine Oil Level Sensor Circuit High",
+      "possible_causes": "NOTE: Circuit OIL_QUALITY_SENSOR; Circuit short to power; Sensor failure",
+      "action": "Check datalogger 0x03F3. Check circuit. Replace sensor."
+    },
+    "P2544-64": {
+      "description": "Torque Management Request Input Signal A - Signal plausibility failure",
+      "possible_causes": "Inappropriate request from ABS",
+      "action": "Check ABS module DTCs. Check CAN."
+    },
+    "P2544-92": {
+      "description": "Torque Management Request Input Signal A - Performance or incorrect operation",
+      "possible_causes": "Inappropriate request from ABS",
+      "action": "Check ABS module DTCs. Check CAN."
+    },
+    "P2610-00": {
+      "description": "ECM/PCM Internal Engine Off Timer Performance",
+      "possible_causes": "Instrument cluster/CJB/CAN fault",
+      "action": "Check related DTCs. Check CAN."
+    },
+    "P2610-84": {
+      "description": "ECM/PCM Engine Off Timer Performance - Signal below allowable range",
+      "possible_causes": "Instrument cluster/CJB/Sensor/Battery fault",
+      "action": "Check related DTCs. Check sensor circuits. Check battery."
+    },
+    "P2610-85": {
+      "description": "ECM/PCM Engine Off Timer Performance - Signal above allowable range",
+      "possible_causes": "Instrument cluster/CJB/Sensor/Battery fault",
+      "action": "Check related DTCs. Check sensor circuits. Check battery."
+    },
+    "P2610-87": {
+      "description": "ECM/PCM Internal Engine Off Timer Performance - Missing message",
+      "possible_causes": "Instrument cluster/CJB/Sensor/CAN fault",
+      "action": "Check related DTCs. Check sensor circuits. Check CAN."
+    },
+    "U0001-88": {
+      "description": "High Speed CAN Communication Bus - Bus off",
+      "possible_causes": "NOTE: Circuit HS_CAN; Circuit short/open",
+      "action": "Check CAN network."
+    },
+    "U0101-00": {
+      "description": "Lost Communication with TCM",
+      "possible_causes": "TCM failure; CAN fault",
+      "action": "Check TCM DTCs. Check CAN/Power/Ground."
+    },
+    "U0103-00": {
+      "description": "Lost Communication with Gear Shift Control Module A",
+      "possible_causes": "CAN fault",
+      "action": "Check gear shift module power/ground/CAN."
+    },
+    "U0104-00": {
+      "description": "Lost Communication With Cruise Control Module",
+      "possible_causes": "Module not installed; CAN fault; Circuit fault",
+      "action": "Check module installation. Check CAN/Power/Ground."
+    },
+    "U0121-00": {
+      "description": "Lost Communication With Anti-lock Braking System (ABS) Control Module",
+      "possible_causes": "CAN fault; Circuit fault",
+      "action": "Check ABS DTCs. Check CAN/Power/Ground."
+    },
+    "U0128-00": {
+      "description": "Lost Communication With Park Brake Control Module",
+      "possible_causes": "CAN fault",
+      "action": "Check EPB power/ground/CAN."
+    },
+    "U0132-00": {
+      "description": "Lost Communication with Suspension Control Module A",
+      "possible_causes": "CAN fault",
+      "action": "Check suspension module power/ground/CAN."
+    },
+    "U0151-00": {
+      "description": "Lost Communication with Restraints Control Module",
+      "possible_causes": "CAN/Hardwire fault",
+      "action": "Check RCM power/ground/CAN."
+    },
+    "U0151-87": {
+      "description": "Lost Communication with Restraints Control Module - Missing message",
+      "possible_causes": "RCM fault",
+      "action": "Check RCM DTCs. Check power/ground/CAN."
+    },
+    "U0155-00": {
+      "description": "Lost Communication with Instrument Panel Cluster (IPC)",
+      "possible_causes": "CAN fault",
+      "action": "Check IPC power/ground/CAN."
+    },
+    "U0167-00": {
+      "description": "Lost Communication with Vehicle Immobilizer Control Module",
+      "possible_causes": "Response timeout; Battery fault",
+      "action": "Check steering column lock power/ground. Check battery. Check CAN."
+    },
+    "U0300-00": {
+      "description": "Internal Control Module Software Incompatibility",
+      "possible_causes": "Incorrect software",
+      "action": "Check/install correct ECM software."
+    },
+    "U0402-00": {
+      "description": "Invalid Data Received From Transmission Control Module",
+      "possible_causes": "TCM request corruption",
+      "action": "Check TCM DTCs. Check CAN."
+    },
+    "U0402-08": {
+      "description": "Invalid Data Received from TCM - Bus signal/message failures",
+      "possible_causes": "TCM request corruption; CAN fault",
+      "action": "Check TCM DTCs. Check CAN."
+    },
+    "U0402-64": {
+      "description": "Invalid Data Received from TCM - Signal plausibility failure",
+      "possible_causes": "TCM request corruption; CAN signal corruption",
+      "action": "Check TCM DTCs. Check CAN."
+    },
+    "U0402-82": {
+      "description": "Invalid Data Received from TCM - Alive/sequence counter incorrect",
+      "possible_causes": "TCM shaft-speed faults",
+      "action": "Check TCM DTCs."
+    },
+    "U0402-83": {
+      "description": "Invalid Data Received from TCM - Value of signal protection calculation incorrect",
+      "possible_causes": "TCM shaft-speed faults",
+      "action": "Check TCM DTCs."
+    },
+    "U0415-00": {
+      "description": "Invalid Data Received From Anti-lock Braking System (ABS) Control Module",
+      "possible_causes": "Electronic throttle unit failure; Harness fault",
+      "action": "Check electronic throttle DTCs. Check harness."
+    },
+    "U0415-64": {
+      "description": "Invalid Data Received From Anti-lock Braking System (ABS) Control Module - Signal plausibility",
+      "possible_causes": "Invalid request from ABS; Torque request error",
+      "action": "Check ABS DTCs. Check CAN."
+    },
+    "U0415-67": {
+      "description": "Invalid Data Received From Anti-lock Braking System (ABS) Control Module - Signal incorrect",
+      "possible_causes": "Torque request error",
+      "action": "Check ABS DTCs. Check CAN."
+    },
+    "U0426-00": {
+      "description": "Invalid Data Received From Vehicle Immobilizer Control Module",
+      "possible_causes": "Security code mis-match",
+      "action": "Check CAN/Power/Ground. Re-synchronize ID."
+    },
+    "U0447-81": {
+      "description": "Invalid Data Received From Gateway A - Invalid serial data received",
+      "possible_causes": "LIN to CAN gateway failure",
+      "action": "Inhibited in ECM (LIN bus flag set during normal operation)."
+    }
+  }
 }
