@@ -1,3 +1,6 @@
+references:
+  - "https://en.wikipedia.org/wiki/Jaguar_F-TYPE"
+
 generations:
   - name: "First Generation (Pre-facelift)"
     start_year: 2013
