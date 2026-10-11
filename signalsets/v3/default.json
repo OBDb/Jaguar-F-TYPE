@@ -1,4 +1,200 @@
 { "commands": [
-
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B03"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SUSPENSION_PRES_FR", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 51, "div": 5, "unit": "psi" }, "name": "Suspension pressure front right"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B04"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SUSPENSION_PRES_FL", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 51, "div": 5, "unit": "psi" }, "name": "Suspension pressure front left"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B05"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SUSPENSION_PRES_RR", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 51, "div": 5, "unit": "psi" }, "name": "Suspension pressure rear right"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B06"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SUSPENSION_PRES_RL", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 51, "div": 5, "unit": "psi" }, "name": "Suspension pressure rear left"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B3C"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SUSPENSION_HEIGHT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Suspension height"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B4D"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_DRIVING_MODE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Driving mode"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B71"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SUSPENSION_HEIGHT_FRONT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Suspension height front"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "3B72"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SUSPENSION_HEIGHT_REAR", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Suspension height rear"}
+  ]},
+{ "hdr": "726", "dbg": true, "cmd": {"22": "FD2A"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_BRAKE", "path": "Control", "fmt": { "len": 8, "max": 1, "unit": "scalar" }, "name": "Brake"}
+  ]},
+{ "hdr": "726", "rax": "72E", "dbg": true, "cmd": {"22": "DD09"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_VSS_726", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "732", "cmd": {"22": "D928"}, "freq": 1, "dbgfilter": { "to": 2013, "from": 2015 },
+  "signals": [
+    {"id": "FTYPE_PARKED", "path": "Movement", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Parked?"}
+  ]},
+{ "hdr": "732", "rax": "73A", "dbg": true, "cmd": {"22": "DA2A"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_CONTACT_READY", "path": "Engine", "fmt": { "len": 8, "max": 1, "unit": "scalar" }, "name": "Contact ready"}
+  ]},
+{ "hdr": "753", "dbg": true, "cmd": {"22": "4208"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_DCDC_CUR_OUT", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "amps" }, "name": "DC-DC, current out"}
+  ]},
+{ "hdr": "753", "dbg": true, "cmd": {"22": "420A"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_DCDC_V_OUT", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "DC-DC voltage out"}
+  ]},
+{ "hdr": "753", "dbg": true, "cmd": {"22": "4837"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_DCDC_HV_V_IN", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "volts" }, "name": "DC-DC HV voltage in"}
+  ]},
+{ "hdr": "753", "dbg": true, "cmd": {"22": "DD02"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_12V_BATTERY", "path": "Battery", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "volts" }, "name": "12V battery"}
+  ]},
+{ "hdr": "754", "fcm1": true, "dbg": true, "cmd": {"22": "A0A6"}, "freq": 60,
+  "signals": [
+    {"id": "FTYPE_GPS_SATS", "path": "GPS", "fmt": {"bix": 72, "len": 8, "max": 255, "unit": "scalar" }, "name": "Satellites in view"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"22": "03F3"}, "freq": 5,
+  "signals": [
+    {"id": "FTYPE_SUMP_OIL_T", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Sump oil temperature", "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"22": "05FC"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_SCR_FLUID_MASS", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "unknown" }, "name": "Exhaust fluid mass"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"22": "40F7"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_HANDBRAKE", "path": "Control", "fmt": { "len": 8, "max": 1, "unit": "scalar" }, "name": "Handbrake"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "033E"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_BOOST_ABS_P_RAW", "path": "Engine", "fmt": { "len": 16, "max": 500, "mul": 100, "div": 13107, "unit": "kilopascal" }, "name": "Boost absolute pressure raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "051C"}, "freq": 5,
+  "signals": [
+    {"id": "FTYPE_AIR_CHG_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Air charge temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0520"}, "freq": 5,
+  "signals": [
+    {"id": "FTYPE_INTERCOOLER_OUTLET_T_B1", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intercooler outlet air temperature B1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "053B"}, "freq": 3600,
+  "signals": [
+    {"id": "FTYPE_MIS_CAT_DAMAGE_1",          "path": "Engine", "fmt": {            "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for catalyst damage, cylinder 1"},
+    {"id": "FTYPE_MIS_CAT_DAMAGE_2",          "path": "Engine", "fmt": {"bix": 8,   "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for catalyst damage, cylinder 2"},
+    {"id": "FTYPE_MIS_CAT_DAMAGE_3",          "path": "Engine", "fmt": {"bix": 16,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for catalyst damage, cylinder 3"},
+    {"id": "FTYPE_MIS_CAT_DAMAGE_4",          "path": "Engine", "fmt": {"bix": 24,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for catalyst damage, cylinder 4"},
+    {"id": "FTYPE_MIS_CAT_DAMAGE_5",          "path": "Engine", "fmt": {"bix": 32,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for catalyst damage, cylinder 5"},
+    {"id": "FTYPE_MIS_CAT_DAMAGE_6",          "path": "Engine", "fmt": {"bix": 40,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for catalyst damage, cylinder 6"},
+    {"id": "FTYPE_MIS_EMISSIONS_1",           "path": "Engine", "fmt": {"bix": 64,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for emissions failure, cylinder 1"},
+    {"id": "FTYPE_MIS_EMISSIONS_2",           "path": "Engine", "fmt": {"bix": 72,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for emissions failure, cylinder 2"},
+    {"id": "FTYPE_MIS_EMISSIONS_3",           "path": "Engine", "fmt": {"bix": 80,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for emissions failure, cylinder 3"},
+    {"id": "FTYPE_MIS_EMISSIONS_4",           "path": "Engine", "fmt": {"bix": 88,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for emissions failure, cylinder 4"},
+    {"id": "FTYPE_MIS_EMISSIONS_5",           "path": "Engine", "fmt": {"bix": 96,  "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for emissions failure, cylinder 5"},
+    {"id": "FTYPE_MIS_EMISSIONS_6",           "path": "Engine", "fmt": {"bix": 104, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Misfires for emissions failure, cylinder 6"},
+    {"id": "FTYPE_COMBINED_MIS_FIRING",       "path": "Engine", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Combined misfire - firing cycle counter, catalyst"},
+    {"id": "FTYPE_COMBINED_MIS_FIRING_CYCLE", "path": "Engine", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Combined misfire - firing cycle counter, emission"},
+    {"id": "FTYPE_COMBINED_MIS_TOT_MIS",      "path": "Engine", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Combined misfire - total misfire counters for catalyst damage during this trip"},
+    {"id": "FTYPE_TOT_MIS_COUNTERS",          "path": "Engine", "fmt": {"bix": 176, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Total misfire counters for emission failure during this trip"},
+    {"id": "FTYPE_CAT_DAMAGE_OUTPUT_1",       "path": "Engine", "fmt": {"bix": 200, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Catalyst damage output counter, cylinder 1"},
+    {"id": "FTYPE_CAT_DAMAGE_OUTPUT_2",       "path": "Engine", "fmt": {"bix": 208, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Catalyst damage output counter, cylinder 2"},
+    {"id": "FTYPE_CAT_DAMAGE_OUTPUT_3",       "path": "Engine", "fmt": {"bix": 216, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Catalyst damage output counter, cylinder 3"},
+    {"id": "FTYPE_CAT_DAMAGE_OUTPUT_4",       "path": "Engine", "fmt": {"bix": 224, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Catalyst damage output counter, cylinder 4"},
+    {"id": "FTYPE_CAT_DAMAGE_OUTPUT_5",       "path": "Engine", "fmt": {"bix": 232, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Catalyst damage output counter, cylinder 5"},
+    {"id": "FTYPE_CAT_DAMAGE_OUTPUT_6",       "path": "Engine", "fmt": {"bix": 240, "len": 8,  "max": 255,   "unit": "scalar" }, "name": "Catalyst damage output counter, cylinder 6"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0543"}, "freq": 5,
+  "signals": [
+    {"id": "FTYPE_IAT_B2", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intake air temperature B2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1172"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_BAT_V", "path": "Battery", "fmt": { "len": 8, "max": 15.9375, "mul": 625, "div": 10000, "unit": "volts" }, "name": "Battery voltage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1670"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_FUEL_RAIL_P", "path": "Fuel", "fmt": { "len": 16, "max": 511992.1875, "mul": 78125, "div": 10000, "unit": "kilopascal" }, "name": "Fuel rail pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "168E"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_FUEL_RAIL_T", "path": "Fuel", "fmt": { "len": 8, "max": 60.96, "min": -61.44, "mul": 48, "div": 100, "sign": true, "unit": "celsius" }, "name": "Fuel rail temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "16C1"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_FLI", "path": "Fuel", "fmt": { "len": 16, "max": 100, "mul": 200, "div": 65535, "unit": "percent" }, "name": "Fuel tank level", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "1E12"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_GEAR_CMD", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear, commanded"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "1E1F"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_GEAR_ENGAGED", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear engaged"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "1E69"}, "freq": 5,
+  "signals": [
+    {"id": "FTYPE_ATF_T", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "1F12"}, "freq": 5,
+  "signals": [
+    {"id": "FTYPE_TQ_CONV_T", "path": "Transmission", "fmt": { "len": 8, "max": 470, "min": -40, "mul": 2, "add": -40, "unit": "celsius" }, "name": "Torque converter temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1E65"}, "freq": 3600,
+  "signals": [
+    {"id": "FTYPE_TRANS_FLUID_OVER_T", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission fluid over temperature counter"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1E66"}, "freq": 3600,
+  "signals": [
+    {"id": "FTYPE_ENG_OIL_OVER_T_CNT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine oil over temperature counter"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1E68"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_TRANS_OUTPUT_SHFT", "path": "Transmission", "fmt": { "len": 8, "max": 8160, "mul": 32, "unit": "rpm" }, "name": "Transmission output shaft speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1E71"}, "freq": 3600,
+  "signals": [
+    {"id": "FTYPE_ENG_CLT_OVER_T_CNT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine coolant over temperature counter"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1E72"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_TURBINE_SPD", "path": "Movement", "fmt": { "len": 8, "max": 8160, "mul": 32, "unit": "rpm" }, "name": "Turbine speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1E7C"}, "freq": 30,
+  "signals": [
+    {"id": "FTYPE_TOT_DIST", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Total distance"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "201C"}, "freq": 1,
+  "signals": [
+    {"id": "FTYPE_TRANSFER_CASE_HIGH_1_0", "path": "Trips", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Transfer case high, 1/low, 0 range"}
+  ]},
+{ "hdr": "7E6", "dbg": true, "cmd": {"22": "2B06"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_FL_WHL_SPD", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "7E6", "dbg": true, "cmd": {"22": "2B07"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_FR_WHL_SPD", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "7E6", "dbg": true, "cmd": {"22": "2B08"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_RL_WHL_SPD", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "7E6", "dbg": true, "cmd": {"22": "2B09"}, "freq": 0.25,
+  "signals": [
+    {"id": "FTYPE_RR_WHL_SPD", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]}
 ]
 }
